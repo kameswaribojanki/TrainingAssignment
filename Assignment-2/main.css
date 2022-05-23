@@ -1,9 +1,6 @@
 *, *::after, *::before{ 
     box-sizing: border-box; 
 } 
-/*
-header section
-*/
 body{ 
     margin: 0; 
 } 
