@@ -6,8 +6,10 @@ body{
 } 
 header>h1{
     text-align: center;
+    margin-bottom: 5px;
 }
 nav>ul{
+    margin-top: 0px;
     list-style-type: none;
     display: flex;
     justify-content: center;
@@ -15,42 +17,52 @@ nav>ul{
 nav>ul>li>a{
     text-decoration: none;
     color: black;
-    margin: 10px;
+    margin: 5px;
 }
-.mart1 h1{
+.mart1 p.p1{
+    margin-top:30px;
+    margin-bottom: 0;
+    padding: 0;
     text-align: center;
     font-size: 40px;
 }
-.mart1 p{
+.mart1 p.p2{
     text-align: justify;
     text-indent: 20px;
+    width: 87%;
+    margin: auto;
+    margin-top: 5px;
 }
 .smart1,.smart2{
     display: inline-block;
-    width: 44.5%;
+    width: 47%;
 }
 .mart2, .mart3{
-    border: 1px solid grey;
+    border: 1px solid lightgray;
     border-radius: 5px;
 }
 .mart2 h1, .mart3 h1{
     text-align: center;
-    background-color: lightgray;
+    background-color: #FCFAFA;
     margin: 0px;
     padding: 10px;
-    border-bottom: 1px solid;
+    border-bottom: 1px solid lightgray;
+}
+.mart2 h2, .mart3 h2{
+    font-size: 30px;
 }
 .mart2 h2,p, .mart3 h2,p{
     text-align: center;
 }
 span{
+    font-size: 20px;
     opacity: 0.5;
 }
 .mart2 button{
     width: 90%;
     margin: 20px;
     padding: 10px;
-    border: 2px solid #08ADEE;
+    border: 2px solid #007bff;
     border-radius: 5px;
     background-color: white;
     color: #08ADEE;
@@ -61,7 +73,7 @@ span{
     margin: 20px;
     padding: 10px;
     border-radius: 5px;
-    background-color:#0990C2;
+    background-color:#007bff;
     border: none;
     color: white;
     font-size: 18px;
@@ -70,12 +82,17 @@ span{
     width: 95%;
 }
 article{
-    margin: 20PX;
+    margin: 10PX;
 }
 .fart2 ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+.fart2 h1{
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-size: 25px;
 }
 .fart2 ul>li>a{
     display: inline-block;
@@ -83,20 +100,20 @@ article{
     color: grey;
     margin:6px 0px;
 }
-.fart2 h1{
-    margin-bottom: 10px;
-    font-size: 25px;
-}
+
 .fart1{
-    padding-bottom: 0px;
+    color: grey;
 }
 .fart2{
-    height:250px;
     width: 35%;
 }
 .fclass{
     float: left;
 }
-hr{
-    width:95%;
+.hr1{
+    width:100%;
+}
+.hr2{
+    margin-top: 30px;
+    width: 97.5%;
 }
