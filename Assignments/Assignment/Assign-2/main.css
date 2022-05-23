@@ -1,0 +1,112 @@
+*, *::after, *::before{ 
+    box-sizing: border-box; 
+} 
+body{ 
+    margin: 0; 
+} 
+header>h1{
+    text-align: center;
+}
+nav>ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+nav>ul>li>a{
+    text-decoration: none;
+    color: black;
+    margin: 10px;
+}
+.mart1 h1{
+    text-align: center;
+    font-size: 40px;
+}
+.mart1 p{
+    text-align: justify;
+    text-indent: 20px;
+}
+.smart1,.smart2, .smart3{
+    display: inline-block;
+    width: 26%;
+}
+.mart2, .mart3{
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+.mart2 h1, .mart3 h1{
+    text-align: center;
+    background-color: lightgray;
+    margin: 0px;
+    padding: 10px;
+    border-bottom: 1px solid;
+}
+.mart2 h2,p, .mart3 h2,p{
+    text-align: center;
+}
+span{
+    opacity: 0.5;
+}
+.mart2 button{
+    width: 84%;
+    margin: 20px 15px;
+    padding: 8px;
+    border: 2px solid #08ADEE;
+    border-radius: 5px;
+    background-color: white;
+    color: #08ADEE;
+    font-size: 18px;
+}
+.mart3 button{
+    width: 77%;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color:#0990C2;
+    border: none;
+    color: white;
+    font-size: 18px;
+}
+article{
+    margin: 20PX;
+}
+.fart2 ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.fart2 ul>li>a{
+    display: inline-block;
+    text-decoration: none;
+    color: grey;
+    margin:6px 0px;
+}
+.hr1{
+    width: 98%;
+}
+.hr2{
+    width:47%;
+}
+.hart{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0px;
+}
+main{
+    width: 50%;
+}
+.sclass{
+    display: flex;
+    justify-content: center;
+}
+footer>article{
+    
+    height: 250px;
+    width: 10%;
+}
+footer{
+    display: flex;
+    justify-content: center;
+}
+.fart1{
+    padding-top: 15px;
+}

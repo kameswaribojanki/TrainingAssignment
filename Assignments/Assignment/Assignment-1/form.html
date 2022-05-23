@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="mobile.css" media="screen and (min-width:300px) and (max-width:768px)">
+        <link rel="stylesheet" href="ipad.css" media="screen and (min-width:768px)">
+        <link rel="stylesheet" href="laptop.css" media="screen and (min-width:1024px)">
+    </head>
+    <body>
+        <form action="#" method="get">
+            <section class="container">
+                <section class="mainsec1">
+                <section class="section1">
+                    <p>CONTACT INFORMATION</p>
+                    <hr class="hrclass hrclass1">
+                        <input type="text" name="fname" id="fname" placeholder="Firstname*" required minlength="3" maxlength="10">
+                        <input type="text" name="lname" id="lname" placeholder="Lastname*" required minlength="3" maxlength="10">
+                        <input type="email" name="email" id="email" placeholder="Email*" required pattern=".+@qualminds\.com|.+@gmail\.com">
+                        <input type="tel" name="phone" id="phone" placeholder="Phone" required pattern="[0-9]{10}">
+                </section>
+                <section class="section2">
+                    <p>ADDRESS</p>
+                    <hr class="hrclass hrclass2">
+                        <article>
+                        <input type="text" name="str1" id="str1" placeholder="Street line1*" required>
+                        </article>
+                        <article>
+                        <input type="text" name="str2" id="str2" placeholder="Street line2" required>
+                        </article>
+                        <input type="text" name="city" id="city" placeholder="City*" required>
+                        <input type="text" name="state" id="state" placeholder="State/Province*" required>
+                    <input type="tel" name="postal" id="postal" placeholder="Postal/Zipcode*" required pattern="[0-9]{5}">
+                        <select id="country" name="country" required>
+                            <option>--Please Select--</option>
+                            <option>Idia</option>
+                            <option>USA</option>
+                            <option>China</option>
+                        </select>
+                        <br>
+                        <label>Country*</label>
+                </section>
+            </section>
+            <section class="mainsec2">
+                <section class="section3">
+                    <p>PRODUCTS</p>
+                    <hr class="hrclass hrclass3">
+                        <input type="text" name="item1" id="item1" placeholder="Item#1name" required pattern="[a-z]{6}">
+                        <input type="number" name="qty1" id="qty1" placeholder="Item#1quantity" required>
+                        <input type="text" name="item2" id="item2" placeholder="Item#2name" required pattern="[a-z]{6}">
+                        <input type="number" name="qty2" id="qty2" placeholder="Item#2quantity" required>
+                        <input type="text" name="item3" id="item3" placeholder="Item#3name" required pattern="[a-z]{6}">
+                        <input type="number" name="qty3" id="qty3" placeholder="Item#3quantity" required>
+                </section>
+                <section class="section4">
+                    <p>NOTES</p>
+                    <hr class="hrclass hrclass4">
+                    <p>Addional comments or questions</p>
+                    <textarea id="tarea" name="tarea" rows="10" cols="30" required maxlength="300"></textarea>
+                </section>
+            </section>
+            <input type="submit" value="REQUEST QUOTE">
+        </section>
+        
+        </form>
+    </body>
+</html>
