@@ -19,6 +19,11 @@ nav>ul>li>a{
     color: black;
     margin: 5px;
 }
+.hart{
+    border-bottom: 1px solid lightgrey;
+    margin-left:0px;
+    margin-right:0px;
+}
 .mart1 p.p1{
     margin-top:30px;
     margin-bottom: 0;
@@ -110,10 +115,10 @@ article{
 .fclass{
     float: left;
 }
-.hr1{
-    width:100%;
-}
-.hr2{
+footer{
+    border-top: 1px solid lightgray;
+    width: 96%;
+    margin-left: 2%;
     margin-top: 30px;
-    width: 97.5%;
+    padding-top: 15px;
 }
