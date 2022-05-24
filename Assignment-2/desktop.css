@@ -81,6 +81,7 @@ span{
     background-color: white;
     color: #007bff;
     font-size: 18px;
+    cursor: pointer;
 }
 .mart3 button{
     width: 85%;
@@ -91,6 +92,7 @@ span{
     border: none;
     color: white;
     font-size: 18px;
+    cursor: pointer;
 }
 .smart1,.smart2, .smart3{
     width: 17%;
