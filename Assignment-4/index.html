@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Food Webpage</title>
+    <style>
+        *, *::after, *::before{ 
+            box-sizing: border-box; 
+        } 
+        body{ 
+            margin: 0; 
+        }
+        .logo img{
+            margin-right:20px;
+        }
+        .logo{
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top:10px;
+            left: 50px;
+        }
+        .logo p{
+            font-size: 25px;
+        }
+        ul{
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        ul>li a{
+            text-decoration: none;
+            color: black;
+        }
+        .header-links-fontsize{
+            margin-top: 30px;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            margin-left: 60%;
+        }
+        .header1 ul>li{
+            padding-right: 50px;
+        }
+        .header2{
+            margin-top: 30px;
+            display: flex;
+        }
+        .img-section{
+            width: 75%;
+        }
+        .description-section{
+            padding: 50px 10px 50px 30px;
+            background-color: #fa5650;
+            color: white;
+            width: 25%;
+        }
+        .description-section p1{
+            font-size: 20px;
+        }
+        .description-section h1{
+            font-size: 50px;
+        }
+        .description-section button{
+            padding: 15px;
+        }
+        .description-section .p2{
+            font-size: 20px;
+        }
+        main,.footer2{
+            padding: 20px 50px;
+            background-color: #ccc;
+        }
+        .row{
+            /* width: 25%; */
+            display: flex;
+        }
+        .row p{
+            margin-right: 50px;
+        }
+        .row .p1{
+            margin-right: 20px;
+        }
+        .menu-type1{
+            display: flex;
+        }
+        .row1{
+            margin-left: 0px;
+            background-color: #fa5650;
+            color: white;
+        }
+        .row2{
+            margin-left: 2%;
+        }
+        .row3{
+            margin-left: 70%;
+        }
+        .row3 p{
+            margin-right: 10px;
+        }
+        .menu-item{
+            display: flex;
+            background-color: #fa5650;
+            color: white;
+        }
+        .menu-item1, .menu-item2, .menu-item3, .menu-item4{
+            width: 25%;
+            padding: 30px;
+        }
+        .menu-item1{
+            border-right: 1px solid white;
+        }
+        input[type="radio"]{
+            margin-top: 20px;
+        }
+        .menu-image{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-auto-rows: auto;
+            grid-gap: 1fr;
+        }
+        .menu-image img{
+            width: 300px;
+            height: 300px;
+        }
+        .menu-img1{
+            background-color:white;
+            text-align: center;
+            padding: 10px;
+        }
+        .footer1{
+            background-color: #fa5650;
+            color: white;
+            padding: 50px;
+            
+        }
+        .side{
+            display: flex;
+            justify-content: space-between;
+        }
+        .footer-div{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid white;
+            /* padding-right: 50px;
+            padding-bottom: 30px;
+            padding-top: 30px; */
+            padding: 30px 50px 30px 0px;
+        }
+        .footer-div div>input[type="text"]{
+            margin-top: 20px;
+            padding: 10px;
+        }
+        .footer-div-none{
+            border-bottom: none;
+        }
+        .footer1 .button1{
+            padding: 10px;
+        }
+        .footer1 .button2{
+            margin-left: 50%;
+            padding: 15px;
+            width: 10%;
+        }
+        .footer2{
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <section class="logo">
+            <img src="logo.png" alt="Logo">
+            <p>The Grilled Prawn</p>
+        </section>
+        <section class="header1">
+            <ul class="header-links-fontsize">
+                <li><a href="#">RECIPES</a></li>
+                <li><a href="#">DRINKS</a></li>
+                <li><a href="#">DECORATIONS</a></li>
+                <li><a href="#">ABOUT THE GRILLED PRAWN</a></li>
+            </ul>
+        </section>
+        <section class="header2">
+            <section class="img-section">
+                <img src="prawns.jpeg" alt="Prawn Image" width="100%" height="1000px">
+            </section>
+            <section class="description-section">
+                <p class="p1">LATEST RECIPE</p>
+                <h1>Backend Polenta with Cheese and Mushrooms</h1>
+                <p class="p2">Polenta, goat cheese, Italian sausage, and cremini mushrooms. 
+                    All together this will make for pretty darn good side dish to a lovely salad. Go for it.</p>
+                <button>Go to recipe <i class="fa-solid fa-arrow-right-long"></i></button>
+            </section>
+        </section>
+    </header>
+    <main>
+        <section class="menu-type">
+            <h1>Our Recipes</h1>
+            <div class="menu-type1">
+            <div class="row row1">
+                <p>Filter recipies by</p>
+                <p>-</p>
+            </div>
+            <div class="row row2">
+                    <p class="p1">sort by</p>
+                    <select class="selectopt">
+                        <option>Newest first</option>
+                        <option>Old</option>
+                    </select>
+                </div>
+                <div class="row"></div>
+                <div class="row row3">
+                        <p><i class="fa-solid fa-magnifying-glass"></i></p>
+                        <p>search recipe</p>
+                </div>
+            </div>
+        </section>
+        <section class="menu-item">
+            <div class="menu-item1">
+                    <label for="items">Food Type:</label><br>
+                         <input type="radio" name="items" id="items" style="margin-top:10px;">Appetisers<br>
+                         <input type="radio" name="items" id="items">Mains<br>
+                         <input type="radio" name="items" id="items">Desserts<br>
+                            <input type="radio" name="items" id="items">Special Occasions 
+            </div>
+            <div class="menu-item2">
+                    <label for="items">Nationality:</label><br>
+                         <input type="radio" name="items" id="items">Italian(34)<br>
+                         <input type="radio" name="items" id="items">French(30)<br>
+                         <input type="radio" name="items" id="items">Spanish(22)<br>
+                            <input type="radio" name="items" id="items">Peruvian(3>)
+            </div>
+            <div class="menu-item3">
+                        <br>
+                         <input type="radio" name="items" id="items">Chinese(18)<br>
+                         <input type="radio" name="items" id="items">Indian(13)<br>
+                         <input type="radio" name="items" id="items">Thai(10)<br>
+                            <input type="radio" name="items" id="items">Norwegian(4)
+            </div>
+            <div class="menu-item4">
+                        <br>
+                         <input type="radio" name="items" id="items">Polish(2)<br>
+                         <input type="radio" name="items" id="items">Danish(3)<br>
+                         <input type="radio" name="items" id="items">Belgian(7)<br>
+                            <input type="radio" name="items" id="items">Persian(13)
+            </div>
+        </section>
+        <section class="menu-image">
+            <div class="menu-img1">
+                <div class="side">
+                    <p>5TH MARCH 2016</p>
+                    <P>THAI</P>
+                </div>
+                <h1>Thai Yellow Curry Noodles with Shiitake Mushrooms</h1>
+                <img src="prawns.jpeg">
+            </div>
+            <div class="menu-img1">
+                    <div class="side">
+                        <p>5TH MARCH 2016</p>
+                        <P>THAI</P>
+                    </div>
+                    <h1>Thai Yellow Curry Noodles with Shiitake Mushrooms</h1>
+                    <img src="prawns.jpeg">
+                </div>
+                <div class="menu-img1">
+                        <div class="side">
+                            <p>5TH MARCH 2016</p>
+                            <P>THAI</P>
+                        </div>
+                        <h1>Thai Yellow Curry Noodles with Shiitake Mushrooms</h1>
+                        <img src="prawns.jpeg">
+                    </div>
+                    <div class="menu-img1">
+                            <div class="side">
+                                <p>5TH MARCH 2016</p>
+                                <P>THAI</P>
+                            </div>
+                            <h1>Thai Yellow Curry Noodles with Shiitake Mushrooms</h1>
+                            <img src="prawns.jpeg">
+                        </div>
+                        <div class="menu-img1">
+                                <div class="side">
+                                    <p>5TH MARCH 2016</p>
+                                    <P>THAI</P>
+                                </div>
+                                <h1>Thai Yellow Curry Noodles with Shiitake Mushrooms</h1>
+                                <img src="prawns.jpeg">
+                            </div>
+                            <div class="menu-img1">
+                                    <div class="side">
+                                        <p>5TH MARCH 2016</p>
+                                        <P>THAI</P>
+                                    </div>
+                                    <h1>Thai Yellow Curry Noodles with Shiitake Mushrooms</h1>
+                                    <img src="prawns.jpeg">
+                                </div>
+                                <div class="menu-img1">
+                                        <div class="side">
+                                            <p>5TH MARCH 2016</p>
+                                            <P>THAI</P>
+                                        </div>
+                                        <h1>Thai Yellow Curry Noodles with Shiitake Mushrooms</h1>
+                                        <img src="prawns.jpeg">
+                                    </div>
+                                    <div class="menu-img1">
+                                            <div class="side">
+                                                <p>5TH MARCH 2016</p>
+                                                <P>THAI</P>
+                                            </div>
+                                            <h1>Thai Yellow Curry Noodles with Shiitake Mushrooms</h1>
+                                            <img src="prawns.jpeg">
+                                        </div>
+                                        <div class="menu-img1">
+                                                <div class="side">
+                                                    <p>5TH MARCH 2016</p>
+                                                    <P>THAI</P>
+                                                </div>
+                                                <h1>Thai Yellow Curry Noodles with Shiitake Mushrooms</h1>
+                                                <img src="prawns.jpeg">
+                                            </div>
+                                            <div class="menu-img1">
+                                                    <div class="side">
+                                                        <p>5TH MARCH 2016</p>
+                                                        <P>THAI</P>
+                                                    </div>
+                                                    <h1>Thai Yellow Curry Noodles with Shiitake Mushrooms</h1>
+                                                    <img src="prawns.jpeg">
+                                                </div>
+                                                <div class="menu-img1">
+                                                        <div class="side">
+                                                            <p>5TH MARCH 2016</p>
+                                                            <P>THAI</P>
+                                                        </div>
+                                                        <h1>Thai Yellow Curry Noodles with Shiitake Mushrooms</h1>
+                                                        <img src="prawns.jpeg">
+                                                    </div>
+                                                    <div class="menu-img1">
+                                                            <div class="side">
+                                                                <p>5TH MARCH 2016</p>
+                                                                <P>THAI</P>
+                                                            </div>
+                                                            <h1>Thai Yellow Curry Noodles with Shiitake Mushrooms</h1>
+                                                            <img src="prawns.jpeg">
+                                                        </div>
+        </section>
+    </main>
+    <footer> 
+        <section class="footer1">
+            <h1>Spread the world!</h1>
+            <p>Our recipes are awesome, sign up to our newsletter and invite friends to join the Gilled Prawn cult</p>
+            <div class="footer-div">
+            <div>
+                    <label>Name</label><br>
+                    <input type="text">
+            </div>
+            <div>
+                    <label>Surame</label><br>
+                    <input type="text">
+            </div>
+            <div>
+                    <label>Email address</label><br>
+                    <input type="text">
+            </div>
+            <div>
+                <p><i class="fa-solid fa-trash"></i> <span>Remove</span></p>
+            </div>
+         </div>
+         <div class="footer-div footer-div-none">
+                <div>
+                        <label>Name</label><br>
+                        <input type="text">
+                </div>
+                <div>
+                        <label>Surame</label><br>
+                        <input type="text">
+                </div>
+                <div>
+                        <label>Email address</label><br>
+                        <input type="text">
+                </div>
+                <div>
+                    <button class="button1">Add Friend</button>
+                </div>
+             </div>
+             <div>
+                    <button class="button2">Send <i class="fa-solid fa-arrow-right-long"></i></button>
+             </div>
+        </section>
+        <section class="footer2">
+            <div>
+                <h1>Our Recipies</h1>
+                <p>All our recipies are tested thoroughly by us to make sure they're suitable for your kitchen at home. 
+                    We know many of you are concerned about healthy eating, so we send them to aqualified nutritionst for through analysis too</p>
+            </div>
+            <div>
+                    <h1>Grilled Praw's History</h1>
+                    <p>The Grilled Prawn is a fictional food blog created in Januarv 2015</p>
+                </div>
+                <div>
+                        <h1>Our Tips and Tricks</h1>
+                        <p>Not sure how to do something? Don't panic. We have plenty of tutorials for you</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                    <div>
+                            <h1>Help and Contact</h1>
+                            <p>Struggling with one of the recipes?</p>
+                            <a href="#">Send us an email</a>
+                            <p>We are always happy to try new thigs, send us your suggestions!</p>
+                        </div>
+                        <div>
+                                <h1>&copy; The Grilled Prawn</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi sint odio porro laboriosam hic laudantium cum voluptatibus aliquid, 
+                                    sit, esse, vitae nulla ducimus delectus facilis nisi cupiditate! Possimus deserunt veritatis molestiae saepe. Excepturi, nostrum ratione.</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, fuga. Sunt et aperiam voluptatum unde optio explicabo amet veritatis quibusdam?</p>
+                            </div>  
+        </section>
+    </footer>
+</body>
+</html>
