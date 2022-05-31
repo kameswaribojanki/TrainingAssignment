@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Food Website</title>
+    <style>
+        *, *::after, *::before{ 
+            box-sizing: border-box; 
+        } 
+        body{ 
+            margin: 0;
+            font-size: 20px;
+        }
+        main,.footer2{
+            padding: 20px 80px;
+            background-color: #ccc;
+        }
+        .logo{
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top:10px;
+            left: 50px;
+        }
+        .logo img{
+            margin-right:20px;
+        }
+        .logo p{
+            font-size: 25px;
+            color:#fa5650; 
+        }
+        ul{
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        ul>li a{
+            text-decoration: none;
+            color: black;
+        }
+        .header-links{
+            margin-top: 30px;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            margin-left: 60%;
+        }
+        .header1 ul>li{
+            padding-right: 50px;
+        }
+        .header2{
+            background-color: #ccc;
+            margin-top: 30px;
+            height: 50%;
+        }
+        .img-section{
+            float: left;
+            width: 75%;
+        }
+        .description-section{
+            float: left;
+            padding: 50px 10px 50px 30px;
+            background-color: #fa5650;
+            color: white;
+            width: 25%;
+            height: 700px;
+        }
+        .description-section p1{
+            font-size: 20px;
+        }
+        .description-section h1{
+            font-size: 50px;
+        }
+        .description-section button{
+            padding: 20px;
+            border: none;
+            cursor: pointer;
+            width: 150px;
+            background-color: white;
+            border-radius: 5px;
+        }
+        .description-section .p2{
+            font-size: 20px;
+        }
+        .header2::after{
+            content: "";
+            clear: both;
+            display: table;
+        }
+        .row{
+            display: flex;
+            align-items: center;
+        }
+        .row1{
+            width: 25%;
+            background-color: #fa5650;
+            color: white;
+        }
+        .row2{
+            width: 50%;
+        }
+        .row3{
+            width: 25%;
+        }
+        .menu-type1{
+            display: flex;
+        }
+        .menu-type .headingP{
+            font-size: 50px;
+        }
+        .row1 i{
+            padding-left: 60%;
+        }
+        .row1 p{
+            padding-left: 20px;
+        }
+        .row2 p{
+            padding: 0px 40px;
+        }
+        .row2 select{
+            padding: 15px;
+            width: 20%;
+        }
+        .row3 p{
+            padding-left: 20px;
+        }
+        .menu-item{
+            display: flex;
+            background-color: #fa5650;
+            color: white;
+            padding: 30px;
+        }
+        .menu-item1, .menu-item2, .menu-item3, .menu-item4{
+            width: 25%;
+            padding: 10px;
+        }
+        .menu-item1{
+            border-right: 1px solid white;
+        }
+        input[type="radio"]{
+            margin-top: 20px;
+        }
+        .menu-image{
+            padding-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-auto-rows: auto;
+            grid-gap: 2em;
+        }
+        /* .menu-image img{
+            width: 300px;
+            height: 300px;
+        } */
+        .menu-img1 .desc{
+            /* background-color:white; */
+            /* text-align: center; */
+            padding: 15px;
+            background-color: white;
+        }
+        .desc{
+            height: 200px;
+        }
+        .desc .p1{
+            font-size: 30px;
+        }
+        /* .menu-img1{
+            width: 500px;
+            height: 500px;
+        } */
+        .menu-img1 img{
+            /* padding-left: 50px;
+            margin-left: 60px; */
+            width: 100%;
+            height: auto;
+        }
+        .side{
+            display: flex;
+            justify-content: space-between;
+        }
+        .return{
+            display: flex;
+            align-items: center;
+            color: #fa5650;
+            font-size: 25px;
+            cursor: pointer;
+        }
+        .return i{
+            margin-left: 10px;
+        }
+        .footer1{
+            background-color: #fa5650;
+            color: white;
+            padding: 50px 80px;  
+        }
+        .footer-div{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid white;
+            padding: 30px 50px 30px 0px;
+        }
+        .footer-div div>input[type="text"]{
+            margin-top: 20px;
+            padding: 15px;
+            width: 400px;
+            border: none;
+            border-radius: 5px;
+        }
+        .footer-div-none{
+            border-bottom: none;
+        }
+        .footer-div .remove{
+            width: 250px;
+            cursor: pointer;
+        }
+        .footer1 .button1{
+            margin-top: 20px;
+            padding: 15px;
+            width: 100px;
+            border: none;
+            border-radius: 5px;
+            width: 250px;
+            background-color: white;
+            cursor: pointer;
+        }
+        .footer1 .button2{
+            margin-top: 50px;
+            margin-left: 50%;
+            padding: 15px;
+            width: 300px;
+            border: none;
+            border-radius: 5px;
+            background-color: white;
+            cursor: pointer;
+        }
+        .footer2{
+            display:flex; 
+        }
+        .footer2 a{
+            text-decoration: none;
+            color: #fa5650;
+        }
+        .footer2-div1, .footer2-div2, .footer2-div3{
+            width:20%; 
+            padding-right:50px;
+        }
+        .footer2-div4{
+            width:20%; 
+            padding-right:80px;
+        }
+        .footer2-div5{
+            width:20%; 
+        }
+        .footer2 .p1{
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <section class="logo">
+            <img src="logo.png" alt="Logo">
+            <p>The Grilled Prawn</p>
+        </section>
+        <section class="header1">
+            <ul class="header-links">
+                <li><a href="#">RECIPES</a></li>
+                <li><a href="#">DRINKS</a></li>
+                <li><a href="#">DECORATIONS</a></li>
+                <li><a href="#">ABOUT THE GRILLED PRAWN</a></li>
+            </ul>
+        </section>
+        <section class="header2">
+            <section class="img-section">
+                <img src="main.jpg" alt="Prawn Image" width="100%" height="700px">
+            </section>
+            <section class="description-section">
+                <p class="p1">LATEST RECIPE</p>
+                <h1>Backend Polenta with Cheese and Mushrooms</h1>
+                <p class="p2">Polenta, goat cheese, Italian sausage, and cremini mushrooms. 
+                    All together this will make for pretty darn good side dish to a lovely salad. Go for it.</p>
+                <button>Go to recipe <i class="fa-solid fa-arrow-right-long"></i></button>
+            </section>
+        </section>
+    </header>
+    <main>
+        <section class="menu-type">
+            <p class="headingP">Our Recipes</p>
+            <div class="menu-type1">
+                <div class="row row1">
+                    <p>Filter recipies by</p>
+                    <i class="fa-solid fa-minus"></i>
+                </div>
+                <div class="row row2">
+                    <p class="p1">sort by</p>
+                    <select class="selectopt">
+                        <option>Newest first</option>
+                        <option>Old</option>
+                    </select>
+                </div>
+                <div class="row row3">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <p>Search recipe</p>
+                </div>
+            </div>
+        </section>
+        <section class="menu-item">
+            <div class="menu-item1">
+                <label for="items">Food Type:</label><br>
+                <input type="radio" name="items" id="items" style="margin-top:20px;">Appetisers<br>
+                <input type="radio" name="items" id="items">Mains<br>
+                <input type="radio" name="items" id="items">Desserts<br>
+                <input type="radio" name="items" id="items">Special Occasions 
+            </div>
+            <div class="menu-item2">
+                <label for="items">Nationality:</label><br>
+                <input type="radio" name="items" id="items" style="margin-top:20px;">Italian(34)<br>
+                <input type="radio" name="items" id="items">French(30)<br>
+                <input type="radio" name="items" id="items">Spanish(22)<br>
+                <input type="radio" name="items" id="items">Peruvian(3)
+            </div>
+            <div class="menu-item3">
+                <br>
+                <input type="radio" name="items" id="items">Chinese(18)<br>
+                <input type="radio" name="items" id="items">Indian(13)<br>
+                <input type="radio" name="items" id="items">Thai(10)<br>
+                <input type="radio" name="items" id="items">Norwegian(4)
+            </div>
+            <div class="menu-item4">
+                <br>
+                <input type="radio" name="items" id="items">Polish(2)<br>
+                <input type="radio" name="items" id="items">Danish(3)<br>
+                <input type="radio" name="items" id="items">Belgian(7)<br>
+                <input type="radio" name="items" id="items">Persian(13)
+            </div>
+        </section>
+        <section class="menu-image">
+            <div class="menu-img1">
+                <div class="desc">
+                    <div class="side">
+                        <p>5TH MARCH 2016</p>
+                        <P>THAI</P>
+                    </div>
+                    <p class="p1">Thai Yellow Curry Noodles with Shiitake Mushrooms</p>
+                </div>
+                <img src="1.jpg">
+            </div>
+            <div class="menu-img1">
+                <div class="desc">
+                    <div class="side">
+                        <p>17TH MARCH 2016</p>
+                        <P>ITALIAN</P>
+                    </div>
+                    <p class="p1">Cappellini with Cherry Tomatoes and Fresh Basil</p>
+                </div>
+                <img src="2.png">
+            </div>
+            <div class="menu-img1">
+                <div class="desc">
+                    <div class="side">
+                        <p>4TH APRIL 2016</p>
+                        <P>ITALIAN</P>
+                    </div>
+                    <p class="p1">Backend Turkey Sausage and Mascarpone Stuffed Shell</p>
+                </div>
+                <img src="3.jpg">
+            </div>
+            <div class="menu-img1">
+                <div class="desc">
+                    <div class="side">
+                        <p>24TH MAY 2016</p>
+                        <P>ITALIAN</P>
+                    </div>
+                    <p class="p1">Caramelised Apple and Herb Fiocchi</p>
+                </div>
+                <img src="4.jpg">
+            </div>
+            <div class="menu-img1">
+                <div class="desc">
+                    <div class="side">
+                        <p>25TH MAY 2016</p>
+                        <P>SPANISH</P>
+                    </div>
+                    <p class="p1">Pumpkin Beer Cheese Soup</p>
+                </div>
+                <img src="5.jpg">
+            </div>
+            <div class="menu-img1">
+                <div class="desc">
+                    <div class="side">
+                        <p>22TH SEPTEMBER 2016</p>
+                        <P>THAI</P>
+                    </div>
+                    <p class="p1">Yum Woon Sen with Shrimp (Glass noodle salad with Shrimp)</p>
+                </div>
+                <img src="6.jpg">
+            </div>
+            <div class="menu-img1">
+                <div class="desc">
+                    <div class="side">
+                        <p>14TH OCTOBER 2016</p>
+                        <P>THAI</P>
+                    </div>
+                    <p class="p1">Beef Satay</p>
+                </div>
+                <img src="7.jpg">
+            </div>
+            <div class="menu-img1">
+                <div class="desc">
+                    <div class="side">
+                        <p>29TH OCTOBER 2016</p>
+                        <P>FRENCH</P>
+                    </div>
+                    <p class="p1">Creamy French Onion Soup Dip in a Bread Bowl</p>
+                </div>
+                <img src="8.jpg">
+            </div>
+            <div class="menu-img1">
+                <div class="desc">
+                    <div class="side">
+                        <p>11TH NOVEMBER 2016</p>
+                        <P>SPANISH</P>
+                    </div>
+                    <p class="p1">Bocadillo Bites</p>
+                </div>
+                <img src="9.jpg">
+            </div>
+            <div class="menu-img1">
+                <div class="desc">
+                    <div class="side">
+                        <p>12TH NOVEMBER 2016</p>
+                        <P>SPANISH</P>
+                    </div>
+                    <p class="p1">Paella</p>
+                </div>
+                <img src="10.jpg">
+            </div>
+            <div class="menu-img1">
+                <div class="desc">
+                    <div class="side">
+                        <p>24TH DECEMBER 2016</p>
+                        <P>THAI</P>
+                    </div>
+                    <p class="p1">Spicy black Bean Burger</p>
+                </div>
+                <img src="11.jpg">
+            </div>
+            <div class="menu-img1">
+                <div class="desc">
+                    <div class="side">
+                        <p>9TH JANUARY 2016</p>
+                        <P>ITALIAN</P>
+                    </div>
+                    <p class="p1">Fresh Fig and Pistachio Salad</p>
+                </div>
+                <img src="12.jpg">
+            </div>
+        </section>
+        <section class="return">
+            <p>Return to the top</p>
+            <i class="fa-solid fa-angle-up"></i>
+        </section>
+    </main>
+    <footer> 
+        <section class="footer1">
+            <h1>Spread the world!</h1>
+            <p>Our recipes are awesome, sign up to our newsletter and invite friends to join the Gilled Prawn cult</p>
+            <div class="footer-div">
+                <div>
+                    <label>Name</label><br>
+                    <input type="text">
+                </div>
+                <div>
+                    <label>Surame</label><br>
+                    <input type="text">
+                </div>
+                <div>
+                    <label>Email address</label><br>
+                    <input type="text">
+                </div>
+                <div class="remove">
+                    <label></label><br>
+                    <p><i class="fa-solid fa-trash"></i> <span>Remove</span></p>
+                </div>
+            </div>
+            <div class="footer-div footer-div-none">
+                <div>
+                    <label>Name</label><br>
+                    <input type="text">
+                </div>
+                <div>
+                    <label>Surame</label><br>
+                    <input type="text">
+                </div>
+                <div>
+                    <label>Email address</label><br>
+                    <input type="text">
+                </div>
+                <div>
+                    <label></label><br>
+                    <button class="button1">Add Friend</button>
+                </div>
+            </div>
+            <div>
+                <button class="button2">Send <i class="fa-solid fa-arrow-right-long"></i></button>
+            </div>
+        </section>
+        <section class="footer2">
+            <div class="footer2-div1">
+                <p class="p1">Our Recipies</h1>
+                <p>All our recipies are tested thoroughly by us to make sure they're suitable for your kitchen at home. 
+                    We know many of you are concerned about healthy eating, so we send them to aqualified nutritionst for through analysis too</p>
+            </div>
+            <div class="footer2-div2">
+                <p class="p1">Grilled Praw's History</p>
+                <p>The Grilled Prawn is a fictional food blog created in Januarv 2015</p>
+            </div>
+            <div class="footer2-div3">
+                <p class="p1">Our Tips and Tricks</p>
+                <p>Not sure how to do something? Don't panic. We have plenty of tutorials for you</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div class="footer2-div4">
+                <p class="p1">Help and Contact</p>
+                <p>Struggling with one of the recipes?</p>
+                <a href="#">Send us an email</a>
+                <p>We are always happy to try new thigs, send us your suggestions!</p>
+            </div>
+            <div class="footer2-div5">
+                <p class="p1">&copy; The Grilled Prawn</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi sint odio porro laboriosam hic laudantium cum voluptatibus aliquid, 
+                        sit, esse, vitae nulla ducimus delectus facilis nisi cupiditate! Possimus deserunt veritatis molestiae saepe. Excepturi, nostrum ratione.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, fuga. Sunt et aperiam voluptatum unde optio explicabo amet veritatis quibusdam?</p>
+            </div>  
+            </section>
+        </footer>   
+</body>
+</html>
