@@ -113,8 +113,16 @@ ul>li a{
     border: 1px solid black;
     border-radius: 5px;
 }
-.row3 p{
+/* .row3 p{
    margin-left: 15px;
+} */
+.row3 input[placeholder="Search recipe"]{
+    border: none;
+    color: black;
+    background-color: #F3F0F0;
+    font-size: 1.2em;
+    padding: 15px;
+    /* text-align: end; */
 }
 .menu-item{
     display: flex;
