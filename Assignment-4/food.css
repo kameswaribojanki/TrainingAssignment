@@ -7,7 +7,7 @@ body{
     font-size: 1em;
 }
 .main,.footer2{
-    padding: 20px 80px;
+    padding: 50px 80px;
     background-color: #F3F0F0;
 }
 .logo{
@@ -63,6 +63,7 @@ ul>li a{
 }
 .description-section h1{
     font-size: 2em;
+    margin: 0px;
 }
 .description-section button{
     padding: 15px;
@@ -106,7 +107,7 @@ ul>li a{
     margin-left: 20px;
 }
 .row2 select{
-    padding: 10px;
+    padding: 10px 20px;
     margin-left: 20px;
 }
 .row3 p{
@@ -147,8 +148,8 @@ ul>li a{
 }
 .checkbox-container label::before{
     content: "";
-    width: 1.1em;
-    height: 1.1em;
+    width: 1.5em;
+    height: 1.5em;
     border: 1px solid white;
     border-radius: 50%;
     margin-right: 15px;
@@ -175,6 +176,7 @@ ul>li a{
     height: 150px;
 }
 .desc .p1{
+    font-size: 1.5em;
     margin: 5px;
 }
 .menu-img1 img{
@@ -194,6 +196,7 @@ ul>li a{
     align-items: center;
     color: #fa5650;
     cursor: pointer;
+    padding-top: 30px;
 }
 .return i{
     margin-left: 10px;
@@ -205,6 +208,7 @@ ul>li a{
 }
 .footer1 .p1{
     font-size: 2em;
+    margin-bottom: 0px;
 }
 .footer-div{
     display: flex;
@@ -216,7 +220,7 @@ ul>li a{
 .footer-div div>input[type="text"],input[type="email"]{
     margin-top: 20px;
     padding: 10px;
-    padding-right: 100px;
+    padding-right: 150px;
     border: none;
     border-radius: 5px;
 }
