@@ -103,8 +103,9 @@ ul>li a{
 .menu-type .headingP{
     font-size: 2em;
 }
-.row2 p{
+.row2 .p1{
     margin-left: 20px;
+    color: rgb(98, 98, 98);
 }
 .row2 select{
     padding: 10px;
