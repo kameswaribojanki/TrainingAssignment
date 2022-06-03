@@ -6,9 +6,24 @@ body{
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 1em;
 }
-.main,.footer2{
+/* .main,.footer2{
     padding: 50px 80px;
     background-color: #F3F0F0;
+} */
+.main{
+    background-color: #F3F0F0;
+}
+.footer2, .menu-image, .return{
+    padding: 20px 80px;
+    /* background-color: #F3F0F0; */
+}
+.menu-type{
+    padding: 0px 80px;
+    /* background-color: #F3F0F0; */
+}
+.menu-item{
+    margin: 0px 80px;
+    /* background-color: #F3F0F0; */
 }
 .logo{
     display: flex;
@@ -71,6 +86,9 @@ ul>li a{
     cursor: pointer;
     background-color: white;
     border-radius: 5px;
+}
+.description-section i{
+    margin-left: 10px;
 }
 .header2::after{
     content: "";
@@ -208,7 +226,7 @@ ul>li a{
     align-items: center;
     color: #fa5650;
     cursor: pointer;
-    padding-top: 30px;
+    /* padding-top: 10px; */
 }
 .return i{
     margin-left: 10px;
@@ -232,7 +250,7 @@ ul>li a{
 .footer-div div>input[type="text"],input[type="email"]{
     margin-top: 20px;
     padding: 10px;
-    padding-right: 150px;
+    padding-right: 120px;
     border: none;
     border-radius: 5px;
 }
@@ -261,6 +279,9 @@ ul>li a{
     border-radius: 5px;
     background-color: white;
     cursor: pointer;
+}
+.footer1 i{
+    margin-left: 10px;
 }
 .footer2{
     display:flex;
