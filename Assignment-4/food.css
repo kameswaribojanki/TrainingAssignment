@@ -13,7 +13,7 @@ body{
 .main{
     background-color: #F3F0F0;
 }
-.footer2, .menu-image, .return{
+.footer, .products, .return{
     padding: 20px 80px;
     /* background-color: #F3F0F0; */
 }
@@ -50,16 +50,16 @@ ul>li a{
     text-decoration: none;
     color: rgb(98, 98, 98);
 }
-.header-links{
+.menu-links{
     margin-top: 50px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
 }
-.header1 ul>li{
+.menu ul>li{
     margin-right: 50px;
 }
-.header2{
+.banner{
     background-color: #F3F0F0;;
     margin-top: 30px;
     height: 50%;
@@ -90,7 +90,7 @@ ul>li a{
 .description-section i{
     margin-left: 10px;
 }
-.header2::after{
+.banner::after{
     content: "";
     clear: both;
     display: table;
@@ -192,15 +192,15 @@ ul>li a{
     align-items: center;
     color: black;
 }
-.menu-img1{
+.product{
     width: 23%;
 }
-.row-img1, .row-img2, .row-img3{
+.product-row1, .product-row2, .product-row3{
     display: flex;
     justify-content: space-between;
     padding-top:30px;
 }
-.menu-img1 .desc{
+.product .desc{
     padding: 15px;
     background-color: white;
     height: 150px;
@@ -209,7 +209,7 @@ ul>li a{
     font-size: 1.5em;
     margin: 5px;
 }
-.menu-img1 img{
+.product img{
     width: 100%;
     height: auto;
 }
@@ -231,37 +231,37 @@ ul>li a{
 .return i{
     margin-left: 10px;
 }
-.footer1{
+.contact{
     background-color: #fa5650;
     color: white;
     padding: 50px 80px;
 }
-.footer1 .p1{
+.contact .p1{
     font-size: 2em;
     margin-bottom: 0px;
 }
-.footer-div{
+.contact-div{
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid white;
     padding: 20px  50px 20px 0px;
 }
-.footer-div div>input[type="text"],input[type="email"]{
+.contact-div div>input[type="text"],input[type="email"]{
     margin-top: 20px;
     padding: 10px;
     padding-right: 120px;
     border: none;
     border-radius: 5px;
 }
-.footer-div-none{
+.contact-div-none{
     border-bottom: none;
 }
-.footer-div .remove{
+.contact-div .remove{
     width: 150px;
     cursor: pointer;
 }
-.footer1 .button1{
+.contact .button1{
     margin-top: 20px;
     padding: 10px;
     border: 1px solid white;
@@ -271,7 +271,7 @@ ul>li a{
     background-color: #fa5650;
     cursor: pointer;
 }
-.footer1 .button2{
+.contact .button2{
     margin-top: 30px;
     margin-left: 40%; 
     padding: 10px 40px;
@@ -280,28 +280,28 @@ ul>li a{
     background-color: white;
     cursor: pointer;
 }
-.footer1 i{
+.contact i{
     margin-left: 10px;
 }
-.footer2{
+.footer{
     display:flex;
     color: rgb(98, 98, 98);
 }
-.footer2 a{
+.footer a{
     text-decoration: none;
     color: #fa5650;
 }
-.footer2-div1, .footer2-div2, .footer2-div3{
+.footer-div1, .footer-div2, .footer-div3{
     width:20%; 
     padding-right:50px;
 }
-.footer2-div4{
+.footer-div4{
     width:20%; 
     padding-right:80px;
 }
-.footer2-div5{
+.footer-div5{
     width:20%; 
 }
-.footer2 .p1{
+.footer .p1{
     font-size: 1.2em;
 }
