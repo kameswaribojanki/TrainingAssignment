@@ -6,24 +6,17 @@ body{
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 1em;
 }
-/* .main,.footer2{
-    padding: 50px 80px;
-    background-color: #F3F0F0;
-} */
 .main{
     background-color: #F3F0F0;
 }
 .footer, .products, .return{
     padding: 20px 80px;
-    /* background-color: #F3F0F0; */
 }
-.menu-type{
+.filter-type{
     padding: 0px 80px;
-    /* background-color: #F3F0F0; */
 }
-.menu-item{
+.filter{
     margin: 0px 80px;
-    /* background-color: #F3F0F0; */
 }
 .logo{
     display: flex;
@@ -115,10 +108,10 @@ ul>li a{
     width: 25%;
     justify-content: flex-end;
 }
-.menu-type1{
+.filter-type1{
     display: flex;
 }
-.menu-type .headingP{
+.filter-type .headingP{
     font-size: 2em;
 }
 .row2 .p1{
@@ -132,32 +125,28 @@ ul>li a{
     border: 1px solid black;
     border-radius: 5px;
 }
-/* .row3 p{
-   margin-left: 15px;
-} */
 .row3 input[placeholder="Search recipe"]{
     border: none;
     color: black;
     background-color: #F3F0F0;
     font-size: 1.2em;
     padding: 15px;
-    /* text-align: end; */
 }
-.menu-item{
+.filter{
     display: flex;
     background-color: #fa5650;
     color: white;
     padding: 30px;
     border-radius: 0px 5px 5px 5px;
 }
-.menu-item p{
+.filter p{
     padding-left: 15px;
 }
-.menu-item1, .menu-item2, .menu-item3, .menu-item4{
+.filter1, .filter2, .filter3, .filter4{
     width: 25%;
     padding: 10px;
 }
-.menu-item1{
+.filter1{
     border-right: 1px solid white;
     width: 24%;
 }
@@ -226,7 +215,6 @@ ul>li a{
     align-items: center;
     color: #fa5650;
     cursor: pointer;
-    /* padding-top: 10px; */
 }
 .return i{
     margin-left: 10px;
