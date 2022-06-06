@@ -1,0 +1,162 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+input[type="submit"]{
+    background-color: #0D79D1;
+    color: white;
+    border: none;
+    padding: 5px;
+}
+.container{
+    width: 100%;
+}
+input,select,textarea{
+width: 95%;
+margin: 5px 10px;
+padding: 10px;
+}
+p,label{
+    margin-left: 10px;
+}
+.hrclass{
+    display: none;
+}
+.section2 label{
+    opacity: 0.6;
+}
+@media screen and (min-width:768px){
+    input[type="submit"]{
+        border-radius: 4px;
+        padding: 5px 10px;
+        width: 20%;
+        margin: 5px 10px;
+    }
+    .section1 input{
+        width: 47%;
+    }
+    .section2 article input{
+        width: 97%;
+    }
+    .section2 input,select{
+        width: 47%;
+    }
+    .section2 label{
+        margin-left: 430px;
+        
+    }
+    .section3 input[type="text"]{
+        width: 64%;
+    }
+    .section3 input[type="number"]{
+        width: 30%;
+    }
+    .section4 textarea{
+        width: 90%;
+        margin-bottom: 5px;
+    }
+    hr{
+        margin: 0px 8px;
+        margin-bottom: 10px;
+    }
+}
+@media screen and (min-width:1024px){
+    input[type="submit"]{
+        margin-left: 20px;
+        width: 100px;
+        height: 30px;
+    }
+    .container{
+        padding: 20px;
+    }
+    input,select,textarea{
+    width: 96%;
+    margin: 10px 10px;
+    margin-left: 18px;
+    }
+    p{
+        margin-left: 18px;
+    }
+    .section1{
+        width: 35%;
+    }
+    .section1 input{
+        margin-left: 18px;
+        width: 90%;
+    }
+    .section2{
+        width: 65%;
+    }
+    article{
+        margin: 0;
+        padding:0;
+    }
+    .section2 article input{
+        margin-left: 18px;
+        width: 89.3%;
+    }
+    .section2 input,select{
+        margin-left: 18px;
+        width: 42.6%;
+    }
+    .section2 label{
+        margin-left: 46%;
+    }
+    .section3{
+        width: 45%;
+    }
+    .section3 input[type="text"]{
+        margin-left: 18px;
+        width: 50%;
+    }
+    .section3 input[type="number"]{
+        width: 33%;
+    }
+    .section4{
+        width: 49%;
+    }
+    .section4 textarea{
+        width: 95.7%;
+    }
+    input[type="submit"]{
+        padding: 5px;
+        width: 15%;
+    }
+    .container .mainsec1 section{
+        float: left;
+    }
+    .mainsec1::after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+    .container .mainsec2 section{
+        float: left;
+    }
+    hr{
+        width: 90%;
+        margin-left: 8px;
+        margin-bottom: 10px;
+    }
+    input[id="str2"]{
+        display: none;
+    }
+    .section5 input{
+        width: 15%;
+    }
+    hr.hrclass1{
+        width: 93%;
+    }
+    hr.hrclass2{
+        width: 89%;
+    }
+    hr.hrclass3{
+        width: 89%;
+    }
+    hr.hrclass4{
+        width: 98%;
+    }
+}
+
