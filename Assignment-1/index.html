@@ -11,6 +11,7 @@
     <body>
         <form action="#" method="get">
             <div class="container">
+                <!-- contact information section start -->
                 <section class="mainsec1">
                     <section class="section1">
                         <p>CONTACT INFORMATION</p>
@@ -20,6 +21,8 @@
                             <input type="email" name="email" id="email" placeholder="Email*" required pattern=".+@qualminds\.com|.+@gmail\.com">
                             <input type="tel" name="phone" id="phone" placeholder="Phone" required pattern="[0-9]{10}">
                     </section>
+                    <!-- end contact information section -->
+                    <!-- address section start -->
                     <section class="section2">
                         <p>ADDRESS</p>
                         <hr class="hrclass hrclass2">
@@ -41,8 +44,10 @@
                             <br>
                             <label>Country*</label>
                     </section>
+                    <!-- end address section -->
                 </section>
                 <section class="mainsec2">
+                    <!-- products section start -->
                     <section class="section3">
                         <p>PRODUCTS</p>
                         <hr class="hrclass hrclass3">
@@ -53,12 +58,15 @@
                             <input type="text" name="item3" id="item3" placeholder="Item#3name" required pattern="[a-z]{6}">
                             <input type="number" name="qty3" id="qty3" placeholder="Item#3quantity" required>
                     </section>
+                    <!-- end products section -->
+                    <!-- notes section start -->
                     <section class="section4">
                         <p>NOTES</p>
                         <hr class="hrclass hrclass4">
                         <p>Addional comments or questions</p>
                         <textarea id="tarea" name="tarea" rows="10" cols="30" required maxlength="300"></textarea>
                     </section>
+                    <!-- end notes section -->
                 </section>
                 <input type="submit" value="REQUEST QUOTE">
             </div>
