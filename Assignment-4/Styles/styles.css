@@ -6,23 +6,36 @@ body{
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 1em;
 }
-.main{
+main{
     background-color: #F3F0F0;
 }
-.footer, .products, .return{
+.footer, .products, .return, .our-recipies{
     padding: 20px 80px;
 }
-.filter-type{
-    padding: 0px 80px;
+/*header section styles start*/
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
-.filter{
-    margin: 0px 80px;
+ul>li a{
+    text-decoration: none;
+    color: rgb(98, 98, 98);
+}
+.menu-links{
+    padding: 65px 50px 30px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.menu ul>li{
+    margin-right: 50px;
 }
 .logo{
     display: flex;
     align-items: center;
     position: absolute;
-    top: 5px;
+    top: 10px;
     left: 50px;
 }
 .logo img{
@@ -34,29 +47,8 @@ body{
     font-size: 1.5em;
     color:#fa5650; 
 }
-ul{
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-ul>li a{
-    text-decoration: none;
-    color: rgb(98, 98, 98);
-}
-.menu-links{
-    margin-top: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-.menu ul>li{
-    margin-right: 50px;
-}
-.banner{
-    background-color: #F3F0F0;;
-    margin-top: 30px;
-    height: 50%;
-}
+/*end header section styles*/
+/*banner section styles start*/
 .img-section{
     float: left;
     width: 75%;
@@ -74,6 +66,7 @@ ul>li a{
     margin: 0px;
 }
 .description-section button{
+    margin-top: 20px;
     padding: 15px 30px;
     border: none;
     cursor: pointer;
@@ -88,72 +81,89 @@ ul>li a{
     clear: both;
     display: table;
 }
+/*end banner section styles*/
+/*our recepies section styles start*/
+.our-recipies h2{
+    font-size: 2em;
+    color: #505050;
+    font-weight: 500;
+}
+.left-section{
+    width: 25%;
+    background-color: #fa5650;
+    padding-bottom: 30px;
+    border-radius: 5px 5px 0px 5px;
+}
+.right-section{
+    width: 75%;
+    background-color: #fa5650;
+    padding-bottom: 30px;
+}
+.filter-recepies-section{
+    display: flex;
+    color: white;
+}
 .row{
     display: flex;
     align-items: center;
-    padding-bottom: 15px;
 }
 .row1{
-    
-    justify-content: space-around;
-    width: 25%;
-    background-color: #fa5650;
-    color: white;
-    border-radius: 5px 5px 0px 0px;
+    justify-content: space-between;
+    padding:10px 15px;
 }
-.row2{
-    width: 50%;
-}
-.row3{
-    width: 25%;
-    justify-content: flex-end;
-}
-.filter-type1{
-    display: flex;
-}
-.filter-type .headingP{
-    font-size: 2em;
-}
-.row2 .p1{
+.row2 .para{
     margin-left: 20px;
     color: rgb(98, 98, 98);
 }
 .row2 select{
-    padding: 10px;
+    font-size: 1em;
+    padding: 10px 30px;
     margin-left: 20px;
     background-color: white;
     border: 1px solid black;
     border-radius: 5px;
 }
+.row3{
+    font-size: 1.2em;
+}
 .row3 input[placeholder="Search recipe"]{
     border: none;
     color: black;
     background-color: #F3F0F0;
-    font-size: 1.2em;
-    padding: 15px;
-}
-.filter{
-    display: flex;
-    background-color: #fa5650;
-    color: white;
-    padding: 30px;
-    border-radius: 0px 5px 5px 5px;
-}
-.filter p{
-    padding-left: 15px;
-}
-.filter1, .filter2, .filter3, .filter4{
-    width: 25%;
+    font-size: 1em;
     padding: 10px;
+    padding-right: 0px;
+}
+.sort-search{
+    display: flex;
+    justify-content: space-between;
+    background-color:#F3F0F0;
+    color: black;
+    align-items:flex-start;
+    padding: 10px;
+}
+.filter-para1{
+    margin: 20px 25px;
+    font-size: 1em;
+}
+.filter-para2{
+    margin: 20px 35px 15px  35px;
+    font-size: 1em;
 }
 .filter1{
     border-right: 1px solid white;
-    width: 24%;
+}
+.rfilter{
+    display: flex;
+}
+.filter2, .filter3, .filter4{
+    width: 30%;
+    padding: 10px;
 }
 .checkbox-container{
     display: flex;
     align-items: center;
-    padding: 10px;
+    padding: 10px 25px;
 }
 .checkbox-container label{
     cursor: pointer;
@@ -181,6 +191,8 @@ ul>li a{
     align-items: center;
     color: black;
 }
+/*end our recepies section styles*/
+/*product section styles start*/
 .product{
     width: 23%;
 }
@@ -192,11 +204,13 @@ ul>li a{
 .product .desc{
     padding: 15px;
     background-color: white;
-    height: 150px;
+    height: 200px;
 }
-.desc .p1{
-    font-size: 1.5em;
+.desc .header-two{
+    font-size: 1.4em;
     margin: 5px;
+    color: #505050;
+    font-weight: 100;
 }
 .product img{
     width: 100%;
@@ -207,9 +221,10 @@ ul>li a{
     justify-content: space-between;
 }
 .side p{
-    font-size: 0.6em;
+    font-size: 0.8em;
     color: grey;
 }
+/*end product section styles*/
 .return{
     display: flex;
     align-items: center;
@@ -219,14 +234,18 @@ ul>li a{
 .return i{
     margin-left: 10px;
 }
+/*contact section styles start*/
 .contact{
     background-color: #fa5650;
     color: white;
     padding: 50px 80px;
 }
-.contact .p1{
+.contact .header-two{
     font-size: 2em;
     margin-bottom: 0px;
+}
+.contact label{
+    display: block;
 }
 .contact-div{
     display: flex;
@@ -235,34 +254,48 @@ ul>li a{
     border-bottom: 1px solid white;
     padding: 20px  50px 20px 0px;
 }
+.contact-div1, .contact-div2, .contact-div3, .remove-div, .button-div{
+    width: 25%;
+}
 .contact-div div>input[type="text"],input[type="email"]{
     margin-top: 20px;
-    padding: 10px;
-    padding-right: 120px;
+    padding: 15px;
+    width: 90%;
     border: none;
     border-radius: 5px;
 }
 .contact-div-none{
     border-bottom: none;
 }
-.contact-div .remove{
-    width: 150px;
+.contact-div .remove-div{
+    margin-top: 40px;
     cursor: pointer;
 }
+.remove-div p{
+    margin-left: 100px;
+    width: 70%;
+    text-align: center;
+}
 .contact .button1{
-    margin-top: 20px;
-    padding: 10px;
+    margin-left: 100px;
+    width: 70%;
+    text-align: center;
+    margin-top: 40px;
+    padding: 15px;
     border: 1px solid white;
     color: white;
     border-radius: 5px;
-    width: 150px;
     background-color: #fa5650;
     cursor: pointer;
 }
+.send-button{
+    width: 100%;
+}
 .contact .button2{
+    margin: 30px 0px;
+    margin-left: 45%;
     margin-top: 30px;
-    margin-left: 40%; 
-    padding: 10px 40px;
+    padding: 15px 50px;
     border: none;
     border-radius: 5px;
     background-color: white;
@@ -271,9 +304,18 @@ ul>li a{
 .contact i{
     margin-left: 10px;
 }
+/*end contact section styles*/
+/*footer section styles start*/
 .footer{
     display:flex;
-    color: rgb(98, 98, 98);
+    color: #505050;
+}
+.footer h2{
+    font-weight: 500;
+    font-size: 1.2em;
+}
+.footer p,a{
+    font-size:0.8em;
 }
 .footer a{
     text-decoration: none;
@@ -290,6 +332,7 @@ ul>li a{
 .footer-div5{
     width:20%; 
 }
-.footer .p1{
-    font-size: 1.2em;
-}
+/*end footer section styles*/
+
+ 
+
