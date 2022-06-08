@@ -1,0 +1,17 @@
+Requirements:
+
+· All the fields should be required. Use Html5 required
+
+· First Name and last name should take min 3 characters and not more than 10 characters
+
+· Email Id should be valid email. And the Email should take only qualminds email
+
+· Phone number should be required, accept only numbers that too exact 10 digits
+
+· Postal zip code should be number
+
+· All items quantity should take numbers
+
+· Quantity name should not take space and the characters should be not more than 6 characters
+
+· Notes should take maximum of 200 characters
