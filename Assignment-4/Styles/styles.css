@@ -54,13 +54,17 @@ ul>li a{
     float: left;
     width: 75%;
 }
+.img-section img{
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 .description-section{
-    float: left;
     padding: 50px 10px 50px 30px;
     background-color: #fa5650;
     color: white;
     width: 25%;
-    height: 700px;
+    /* height: 700px; */
 }
 .description-section h1{
     font-size: 3em;
@@ -80,10 +84,8 @@ ul>li a{
 .description-section i{
     margin-left: 10px;
 }
-.banner::after{
-    content: "";
-    clear: both;
-    display: table;
+.banner{
+    display: flex;
 }
 /*end banner section styles*/
 /*our recepies section styles start*/
