@@ -4,7 +4,7 @@
 body{ 
     margin: 0;
     font-family: 'Roboto Condensed', sans-serif;
-    font-size: 1em;
+    font-size: 16px;
 }
 main{
     background-color: #F3F0F0;
@@ -23,20 +23,20 @@ ul>li a{
     color: rgb(98, 98, 98);
 }
 .menu-links{
-    padding: 65px 50px 30px 0px;
+    padding: 65px 80px 30px 0px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
 }
 .menu ul>li{
-    margin-right: 50px;
+    margin-left: 50px;
 }
 .logo{
     display: flex;
     align-items: center;
     position: absolute;
     top: 10px;
-    left: 50px;
+    left: 80px;
 }
 .logo img{
     margin-right:20px;
@@ -103,19 +103,19 @@ ul>li a{
     display: flex;
     color: white;
 }
-.row{
+.filter-recepie,.sort-recepie,.search-recepie{
     display: flex;
     align-items: center;
 }
-.row1{
+.filter-recepie1{
     justify-content: space-between;
     padding:10px 15px;
 }
-.row2 .para{
+.sort-recepie1 .para{
     margin-left: 20px;
     color: rgb(98, 98, 98);
 }
-.row2 select{
+.sort-recepie1 select{
     font-size: 1em;
     padding: 10px 30px;
     margin-left: 20px;
@@ -123,10 +123,10 @@ ul>li a{
     border: 1px solid black;
     border-radius: 5px;
 }
-.row3{
+.search-recepie1{
     font-size: 1.2em;
 }
-.row3 input[placeholder="Search recipe"]{
+.search-recepie1 input[placeholder="Search recipe"]{
     border: none;
     color: black;
     background-color: #F3F0F0;
