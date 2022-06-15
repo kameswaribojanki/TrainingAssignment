@@ -177,7 +177,7 @@ nav ul li{
     background-color: white;
 }
 .desc .header-two{
-    font-size: 1.9em;
+    font-size: 1.5em;
     margin: 5px;
     color: #505050;
     font-weight: 500;
@@ -290,7 +290,7 @@ nav ul li{
         padding: 10px;
     }
     .product .desc{
-        height: 200px;
+        height: 180px;
     }
     .contact-div{
         display: flex;
