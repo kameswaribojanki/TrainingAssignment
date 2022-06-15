@@ -51,7 +51,7 @@ ul>li a{
 /*end header section styles*/
 /*banner section styles start*/
 .img-section{
-    float: left;
+    /* float: left; */
     width: 70%;
 }
 .img-section img{

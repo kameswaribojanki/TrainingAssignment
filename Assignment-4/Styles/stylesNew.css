@@ -1,0 +1,448 @@
+*, *::after, *::before{ 
+    box-sizing: border-box; 
+} 
+body{ 
+    margin: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+main, footer{
+    background-color: #F3F0F0;
+}
+/* header start */
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo p{
+    padding-left: 20px;
+    color: #fa5650;
+}
+nav ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+nav ul li a{
+    text-decoration: none;
+    color: black;
+}
+nav ul li{
+    text-align: center;
+    padding: 10px 0px;
+}
+.banner img{
+    max-width: 100%;
+    height: auto;
+}
+.description-section{
+    padding: 30px;
+    background-color: #fa5650;
+    color: white;
+}
+.description-section button{
+    margin-top: 20px;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 5px;
+}
+.description-section i{
+    margin-left: 10px;
+}
+.description-section p{
+    line-height: 25px;
+}
+.description-section h1{
+    font-size: 2.5em;
+}
+/* banner end */
+/* our recipies section start */
+.filter-recepies-section{
+    color: white;
+}
+.our-recipies h2{
+    font-size: 2em;
+    color: #505050;
+    font-weight: 500;
+}
+.left-section{
+    background-color: #fa5650;
+    padding: 20px;
+}
+.filter-recepie, .sort-recepie, .search-recepie{
+    display: flex;
+    align-items: center;
+}
+.checkbox-container{
+    display: flex;
+    align-items: center;
+    padding: 10px 10px 10px 0px;
+    width: 50%;
+}
+.checkbox-container label{
+    cursor: pointer;
+    display: flex;
+}
+.checkbox-container input[type="checkbox"]{
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+    color: white;
+}
+.checkbox-container label::before{
+    content: "";
+    width: 1.5em;
+    height: 1.5em;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-right: 15px;
+    background-color: white;
+}
+.checkbox-container input[type="checkbox"]:checked + label::before{
+    content: "\002714";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+.filter-recepie1{
+    justify-content: space-between;
+}
+.checkbox-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+.sort-search{
+    display: flex;
+    justify-content: space-between;
+    background-color:#F3F0F0;
+    color: black;
+    align-items:center;
+}
+.sort-recepie1 .para{
+    color: rgb(98, 98, 98);
+    padding: 0px 20px;
+}
+.sort-recepie1 select{
+    padding: 5px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+.search-recepie1 input[placeholder="Search recipe"]{
+    border: none;
+    color: black;
+    background-color: #F3F0F0;
+    text-align: end;
+    font-size: 1em;
+}
+.right-section{
+    background-color: #fa5650;
+}
+.rfilter{
+    display: flex;
+    padding: 0px 20px;
+}
+.filter2, .filter3, .filter4{
+    width: 100%; 
+}
+.filter-para2{
+    padding-left:20px;
+    font-size: 1em;
+}
+/* our recipe section end */
+/* product section start */
+.product{
+    padding: 10px 0px;
+}
+.product img{
+    width: 100%;
+    object-fit: cover;
+    height: auto;
+}
+.side{
+    display: flex;
+    justify-content: space-between;
+}
+.side p{
+    font-size: 0.8em;
+    color: grey;
+}
+.product .desc{
+    padding: 15px;
+    background-color: white;
+}
+.desc .header-two{
+    font-size: 1.9em;
+    margin: 5px;
+    color: #505050;
+    font-weight: 500;
+}
+.return{
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    color: #fa5650;
+    cursor: pointer;
+}
+/* product section end */
+.return i{
+    margin-left: 10px;
+}
+/* contact section start */
+.contact{
+    background-color: #fa5650;
+    color: white;
+    padding: 20px;
+}
+.contact .header-two{
+    font-size: 2em;
+    margin-bottom: 0px;
+}
+.contact p{
+    line-height: 1.5;
+}
+.contact label{
+    display: block;
+    padding: 20px 2px;
+}
+.contact-div div>input[type="text"],input[type="email"]{
+    padding: 15px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+}
+.contact-div .remove-div{
+    margin-top: 30px;
+    cursor: pointer;
+    text-align: center;
+}
+.contact .button1{
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    padding: 15px;
+    border: 1px solid white;
+    color: white;
+    border-radius: 5px;
+    background-color: #fa5650;
+    cursor: pointer;
+}
+.send-button{
+    width: 100%;
+}
+.contact .button2{
+    width: 100%;
+    text-align: center;
+    margin: 30px 0px;
+    margin-top: 30px;
+    padding: 15px 50px;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+}
+.contact i{
+    margin-left: 10px;
+}
+/* contact section end */
+/* footer section start */
+.footer{
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer-div1, .footer-div2, .footer-div3, .footer-div4, .footer-div5{
+    width:50%; 
+    padding-right:50px;
+}
+.footer h2{
+    font-weight: 500;
+    font-size: 1.2em;
+}
+.footer p,a{
+    font-size:0.9em;
+    line-height: 1.5;
+}
+.footer a{
+    text-decoration: none;
+    color: #fa5650;
+}
+/* footer section end */
+@media screen and (min-width: 800px){
+    .header-class{
+        display: flex;
+        justify-content: space-around;
+    }
+    .checkbox-container{
+        width: 33.33%;
+    }
+    .products{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .product{
+        width: 50%;
+        padding: 10px;
+    }
+    .product .desc{
+        height: 200px;
+    }
+    .contact-div{
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid white;
+        padding-bottom: 30px;
+    }
+    .contacts{
+        width: 70%;
+    }
+    .remove-div, .button-div{
+        width: 30%;
+    }
+    .contact .button1{
+        width: 80%;
+        text-align: center;
+        margin-left: 30px;
+        padding: 15px;
+        border: 1px solid white;
+        color: white;
+        border-radius: 5px;
+        background-color: #fa5650;
+        cursor: pointer;
+    }
+    .footer-div1, .footer-div2, .footer-div3, .footer-div4, .footer-div5{
+        width:33%; 
+        padding-right:20px;
+    }
+}
+@media screen and (min-width: 1200px){
+    .footer, .return, .our-recipies, .contact, .header-class{
+        padding: 20px 80px;
+    }
+    .products{
+        padding: 0px 70px;
+    }
+    .logo{
+        width: 30%;
+        display: inline-block;
+    }
+    .logo p{
+        margin-left: 100px;
+        margin-top: 45px;
+    }
+    .logo img{
+        position: absolute;
+        width: 110px;
+        height: 110px;
+        left: 80px;
+        top: 30px;
+    }
+    .menu{
+        width: 70%;
+        padding-top: 30px;
+    }
+    .menu ul{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .menu ul li{
+        padding-left: 50px;
+    }
+    .banner{
+        display: flex;
+    }
+    .img-section{
+        width: 70%;
+    }
+    .img-section img{
+        height: 100%;
+    }
+    .description-section{
+        padding: 50px 10px 50px 30px;
+        width: 30%;
+    }
+    .filter-recepies-section{
+        display: flex;
+    }
+    .checkbox-list-1{
+        display: block;
+    }
+    .filter1{
+        border-right: 1px solid white;
+    }
+    .left-section .checkbox-container{
+        width: 100%;
+    }
+    .right-section p{
+        padding-top: 20px;
+    }
+    .left-section{
+        width: 25%;
+        padding-bottom: 30px;
+    }
+    .right-section{
+        width: 75%;
+        padding-bottom: 30px;
+    }
+    .product{
+        width: 25%;
+    }
+    .contact-div{
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+    }
+    .contacts{
+        display: flex;
+        width: 80%;
+    }
+    .remove-div, .button-div{
+        width: 20%;
+    } 
+    .contact-div div>input[type="text"],input[type="email"]{
+        padding: 15px 50px;
+        width: 95%;
+    }
+    .contact-div-none{
+        border-bottom: none;
+    }
+    .remove-div p{
+        margin-left: 20px;
+        width: 70%;
+    }
+    .contact .button1{
+        margin-left: 20px;
+    }
+    .send-button{
+        width: 100%;
+    }
+    .contact .button2{
+        width: 20%;
+        margin-left: 42.5%;
+    }
+    .contact i{
+        margin-left: 10px;
+    }
+    .footer-div1, .footer-div2, .footer-div3, .footer-div4, .footer-div5{
+        width:20%;
+    }
+    .footer-div4{
+        padding-right: 50px;
+    }
+    .footer-div5{
+        padding-right: 0px;
+    }
+}
+@media screen and (min-width: 1500px){
+    .contact-div div>input[type="text"],input[type="email"]{
+        padding: 15px 130px;
+    }
+    .contact .button2{
+        width: 15%;
+    }
+}
