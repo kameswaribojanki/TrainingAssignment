@@ -12,30 +12,28 @@ main, footer{
 }
 /* header start */
 .logo{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
 }
 .logo p{
-    padding-left: 20px;
     color: #fa5650;
 }
-nav ul{
+.menu ul{
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
-nav ul li a{
+.menu ul li a{
     text-decoration: none;
     color: black;
 }
-nav ul li{
+.menu ul li{
     text-align: center;
     padding: 10px 0px;
 }
 .banner img{
     max-width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
 }
 .description-section{
     padding: 30px;
@@ -274,12 +272,30 @@ nav ul li{
 }
 /* footer section end */
 @media screen and (min-width: 800px){
-    .menu ul{
+    .logo{
         display: flex;
+        align-items: center;
         justify-content: center;
     }
+    .logo p{
+        padding-left: 20px;
+    }
+    .menu ul{
+        display: flex;
+        justify-content: space-between;
+    }
     .menu ul li{
-        padding: 20px 30px;
+        padding: 20px;
+    }
+    .banner{
+        display: flex;
+    }
+    .img-section{
+        width: 70%;
+    }
+    .description-section{
+        padding: 50px 10px 50px 30px;
+        width: 30%;
     }
     .checkbox-container{
         width: 33.33%;
@@ -306,6 +322,7 @@ nav ul li{
     }
     .remove-div, .button-div{
         width: 30%;
+        padding-top: 25px;
     }
     .contact .button1{
         width: 80%;
@@ -320,7 +337,12 @@ nav ul li{
     }
     .footer-div1, .footer-div2, .footer-div3, .footer-div4, .footer-div5{
         width:33%; 
-        padding-right:20px;
+    }
+    .footer, .return, .our-recipies, .contact{
+        padding: 20px 40px;
+    }
+    .products, .header-class{
+        padding: 0px 30px;
     }
 }
 @media screen and (min-width: 1200px){
@@ -332,7 +354,6 @@ nav ul li{
     }
     .header-class{
         display: flex;
-        /* justify-content: space-between; */
     }
     .logo{
         width: 30%;
@@ -344,8 +365,6 @@ nav ul li{
     }
     .logo img{
         position: absolute;
-        /* width: 100px;
-        height: 100px; */
         left: 80px;
         top:10px;
     }
@@ -354,24 +373,10 @@ nav ul li{
         padding-top: 30px;
     }
     .menu ul{
-        /* display: flex; */
         justify-content: flex-end;
     }
     .menu ul li{
         padding-left: 50px;
-    }
-    .banner{
-        display: flex;
-    }
-    .img-section{
-        width: 70%;
-    }
-    .img-section img{
-        height: 100%;
-    }
-    .description-section{
-        padding: 50px 10px 50px 30px;
-        width: 30%;
     }
     .filter-recepies-section{
         display: flex;
@@ -437,6 +442,7 @@ nav ul li{
     }
     .footer-div1, .footer-div2, .footer-div3, .footer-div4, .footer-div5{
         width:20%;
+        padding-right: 20px;
     }
     .footer-div4{
         padding-right: 50px;
