@@ -36,7 +36,7 @@ main, footer{
     display: none;
 }
 .menu-icon{
-    padding: 50px 50px 0px 100px;
+    padding: 50px 30px 0px 100px;
 }
 .menu-icon i{
     font-size: 2em;
@@ -297,6 +297,7 @@ main, footer{
         top:10px;
     }
     .menu{
+        /* display: block; */
         width: 70%;
         padding-top: 30px;
     }
