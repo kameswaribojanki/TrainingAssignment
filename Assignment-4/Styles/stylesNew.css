@@ -11,8 +11,10 @@ main, footer{
     background-color: #F3F0F0;
 }
 /* header start */
-.logo{
-    text-align: center;
+.header-class{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px 0px 40px;
 }
 .logo p{
     color: #fa5650;
@@ -29,6 +31,15 @@ main, footer{
 .menu ul li{
     text-align: center;
     padding: 10px 0px;
+}
+.menu-links{
+    display: none;
+}
+.menu-icon{
+    padding: 50px 50px 0px 100px;
+}
+.menu-icon i{
+    font-size: 2em;
 }
 .banner img{
     max-width: 100%;
@@ -273,19 +284,31 @@ main, footer{
 /* footer section end */
 @media screen and (min-width: 800px){
     .logo{
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        width: 30%;
+        display: inline-block;
     }
     .logo p{
-        padding-left: 20px;
+        margin-left: 90px;
+        margin-top: 40px;
     }
-    .menu ul{
+    .logo img{
+        position: absolute;
+        left: 25px;
+        top:10px;
+    }
+    .menu{
+        width: 70%;
+        padding-top: 30px;
+    }
+    .menu-icon{
+        display: none;
+    }
+    .menu-links{
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
     }
     .menu ul li{
-        padding: 20px;
+        padding-right: 20px;
     }
     .banner{
         display: flex;
@@ -352,28 +375,13 @@ main, footer{
     .products, .header-class{
         padding: 0px 70px;
     }
-    .header-class{
-        display: flex;
-    }
-    .logo{
-        width: 30%;
-        display: inline-block;
-    }
     .logo p{
-        margin-left: 100px;
-        margin-top: 52px;
+        margin-left: 120px;
     }
     .logo img{
         position: absolute;
         left: 80px;
         top:10px;
-    }
-    .menu{
-        width: 70%;
-        padding-top: 30px;
-    }
-    .menu ul{
-        justify-content: flex-end;
     }
     .menu ul li{
         padding-left: 50px;
@@ -457,5 +465,10 @@ main, footer{
     }
     .contact .button2{
         width: 15%;
+    }
+    .logo p{
+        text-align: left;
+        margin-left: 120px;
+        margin-top: 40px;
     }
 }
