@@ -11,10 +11,11 @@ main, footer{
     background-color: #F3F0F0;
 }
 /* header start */
-.header-class{
+
+.header-section{
     display: flex;
-    justify-content: space-between;
-    padding: 20px 40px 0px 40px;
+    align-items: center;
+    justify-content: space-around;
 }
 .logo p{
     color: #fa5650;
@@ -283,22 +284,22 @@ main, footer{
 }
 /* footer section end */
 @media screen and (min-width: 800px){
+    .header-class{
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 40px 0px 40px;
+    }
     .logo{
-        width: 30%;
-        display: inline-block;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        left: 40px;
+        top:0px;
     }
     .logo p{
-        margin-left: 90px;
-        margin-top: 40px;
-    }
-    .logo img{
-        position: absolute;
-        left: 25px;
-        top:10px;
+        padding-left: 10px;
     }
     .menu{
-        /* display: block; */
-        width: 70%;
         padding-top: 30px;
     }
     .menu-icon{
@@ -376,13 +377,8 @@ main, footer{
     .products, .header-class{
         padding: 0px 70px;
     }
-    .logo p{
-        margin-left: 120px;
-    }
-    .logo img{
-        position: absolute;
+    .logo{
         left: 80px;
-        top:10px;
     }
     .menu ul li{
         padding-left: 50px;
@@ -466,10 +462,5 @@ main, footer{
     }
     .contact .button2{
         width: 15%;
-    }
-    .logo p{
-        text-align: left;
-        margin-left: 120px;
-        margin-top: 40px;
     }
 }
