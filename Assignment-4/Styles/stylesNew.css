@@ -422,7 +422,7 @@ main, footer{
         width: 20%;
     } 
     .contact-div div>input[type="text"],input[type="email"]{
-        padding: 15px 50px;
+        padding: 15px 90px 15px 10px;
         width: 95%;
     }
     .contact-div-none{
@@ -458,7 +458,7 @@ main, footer{
 }
 @media screen and (min-width: 1500px){
     .contact-div div>input[type="text"],input[type="email"]{
-        padding: 15px 130px;
+        padding: 15px 250px 15px 10px;
     }
     .contact .button2{
         width: 15%;
