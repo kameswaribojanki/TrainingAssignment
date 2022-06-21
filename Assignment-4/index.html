@@ -287,7 +287,7 @@
         <section class="contact">
             <h2 class="header-two">Spread the world!</h2>
             <p>Our recipes are awesome, sign up to our newsletter and invite friends to join the Gilled Prawn cult</p>
-            <div class="contact-div">
+            <!-- <div class="contact-div">
                 <div class="contacts">
                     <div class="contact-div1">
                         <label>Name</label>
@@ -305,26 +305,61 @@
                 <div class="remove-div">
                     <p><i class="fa-solid fa-trash"></i> <span>Remove</span></p>
                 </div>
-            </div>
-            <div class="contact-div contact-div-none">
+            </div> -->
+            <!-- <div class="contact-div contact-div-none">
                 <div class="contacts">
                     <div class="contact-div1">
                         <label>Name</label>
-                        <input type="text" placeholder="George">
+                        <input type="text" placeholder="George" id="name">
+                        <span id="err-name"></span>
                     </div>
                     <div class="contact-div2">
                         <label>Surame</label>
-                        <input type="text" placeholder="Stone">
+                        <input type="text" placeholder="Stone" id="surName">
                     </div>
                     <div class="contact-div3">
                         <label>Email address</label>
-                        <input type="email" placeholder="george.stone@gmail.com">
+                        <input type="email" placeholder="george.stone@gmail.com" id="email">
                     </div>
                 </div>
                 <div class="button-div">
-                    <button class="button1">Add Friend</button>
+                    <button class="button1" id="addbutton" onclick="store()">Add Friend</button>
                 </div>
-            </div>
+            </div> -->
+
+
+
+
+            <!-- <div id="error"></div> -->
+            <form action="/" method="GET" id="form">
+                <div class="contact-div">
+                    <div class="contacts">
+                        <div class="contact-div1">
+                            <label>Name</label>
+                            <input type="text" placeholder="George" id="name">
+                        </div>
+                        <div class="contact-div2">
+                            <label>Surame</label>
+                            <input type="text" placeholder="Stone" id="surName">
+                        </div>
+                        <div class="contact-div3">
+                            <label>Email address</label>
+                            <input type="email" placeholder="george.stone@gmail.com" id="email">
+                        </div>
+                    </div>
+                    <div class="button-div">
+                        <input type="submit" value="Add Friend" class="button1">
+                    </div>
+                </div>
+            </form>
+                <table id="table">
+                    
+                </table>
+
+
+
+
+            
             <div class="send-button">
                 <button class="button2">Send <i class="fa-solid fa-arrow-right-long"></i></button>
             </div>
