@@ -81,11 +81,12 @@ function store(){
     name.value = "";
     surName.value="";
     email.value = "";
+    event.preventDefault();
 }
 
 
 function deletFn(index){
-    alert("delete");
+    alert("perform delete operation");
     details.splice(index, 1);
     setData();
     table();
@@ -93,7 +94,7 @@ function deletFn(index){
 
 
 function editFn(index){
-    alert("edit");
+    alert("perform update operation");
     let editForm=`
     <div class="contact-div">
     <div class="contacts">
@@ -119,6 +120,7 @@ function editFn(index){
 }
 
 function update(index) {
+    event.preventDefault();
     let updatedName = document.getElementById("updatedName");
     let updatedSurname=document.getElementById("updatedSurName");
     let updatedEmail = document.getElementById("updatedEmail");
@@ -130,6 +132,28 @@ function update(index) {
     };
     setData();
     table();
+    let form1=`
+    <div class="contact-div">
+    <div class="contacts">
+        <div class="contact-div1">
+            <label>Name</label>
+            <input type="text" placeholder="George" id="name">
+        </div>
+        <div class="contact-div2">
+            <label>Surame</label>
+            <input type="text" placeholder="Stone" id="surName">
+        </div>
+        <div class="contact-div3">
+            <label>Email address</label>
+            <input type="email" placeholder="george.stone@gmail.com" id="email">
+        </div>
+    </div>
+    <div class="button-div">
+        <input type="submit" value="Add Friend" class="button1">
+    </div>
+</div>
+    `;
+    document.getElementById("form").innerHTML=form1;
 }
 
 

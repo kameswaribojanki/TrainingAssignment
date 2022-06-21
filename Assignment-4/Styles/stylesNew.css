@@ -259,6 +259,26 @@ main, footer{
 .contact i{
     margin-left: 10px;
 }
+table{
+    width: 100%;
+}
+table,th,td{
+    padding: 10px;
+    border:1px solid #fa5650;
+    border-collapse: collapse;
+}
+tbody{
+    background-color: white;
+    color: black;
+    text-align: center;
+}
+table i{
+    padding: 10px 20px;
+}
+table button{
+    border: none;
+    background-color: white;
+}
 /* contact section end */
 /* footer section start */
 .footer{
@@ -454,27 +474,6 @@ main, footer{
     }
     .footer-div5{
         padding-right: 0px;
-    }
-    table{
-        margin: 30px 100px;
-        width: 90%;
-    }
-    table,th,td{
-        padding: 10px;
-        border:1px solid #fa5650;
-        border-collapse: collapse;
-    }
-    tbody{
-        background-color: white;
-        color: black;
-        text-align: center;
-    }
-    table i{
-        padding: 10px 20px;
-    }
-    table button{
-        border: none;
-        background-color: white;
     }
 }
 @media screen and (min-width: 1500px){
