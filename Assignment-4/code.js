@@ -70,6 +70,14 @@ function store(){
         alert("fields should not be numbers!");
         return
     }
+    else if(name.value.length<3 || surName.value.length<3){
+        alert("minimum 3 characters needed");
+        return
+    }
+    else if(name.value.length>10 || surName.value.length>10){
+        alert("maximum 10 characters allowed");
+        return
+    }
     let data = {
         name: name.value,
         surName:surName.value,
