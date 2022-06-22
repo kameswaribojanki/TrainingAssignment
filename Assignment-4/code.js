@@ -78,6 +78,10 @@ function store(){
         alert("maximum 10 characters allowed");
         return
     }
+    else if((!(email.value).endsWith((email.value).match(/gmail.com/i))) && !((email.value).endsWith((email.value).match(/qualminds.com/i)))){
+        alert("allow only gmail and qualminds emails");
+        return
+    }
     let data = {
         name: name.value,
         surName:surName.value,
