@@ -64,22 +64,27 @@ function store(){
 
     if (name.value == "" || surName.value=="" || email.value=="") {
         alert("please fill the details!");
+        event.preventDefault();
         return
     }
     else if( (!isNaN(name.value)) || (!isNaN(surName.value)) ){
         alert("fields should not be numbers!");
+        event.preventDefault();
         return
     }
     else if(name.value.length<3 || surName.value.length<3){
         alert("minimum 3 characters needed");
+        event.preventDefault();
         return
     }
     else if(name.value.length>10 || surName.value.length>10){
         alert("maximum 10 characters allowed");
+        event.preventDefault();
         return
     }
     else if((!(email.value).endsWith((email.value).match(/gmail.com/i))) && !((email.value).endsWith((email.value).match(/qualminds.com/i)))){
         alert("allow only gmail and qualminds emails");
+        event.preventDefault();
         return
     }
     let data = {
