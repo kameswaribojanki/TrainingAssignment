@@ -93,6 +93,11 @@ function validate(){
         event.preventDefault();
         isValidTrue=false;
     }
+    else if((name.value).includes((name.value).match(/ /g)) || (surName.value).includes((surName.value).match(/ /g)) ||(email.value).includes((email.value).match(/ /g))){
+        alert("white spaces are not allowed");
+        event.preventDefault();
+        isValidTrue=false;
+    }
     return isValidTrue;
 }
 
