@@ -73,11 +73,6 @@ function validate(){
         event.preventDefault();
         isValidTrue=false;
     }
-    else if( !isNaN(name.value) || !isNaN(surName.value) ){
-        alert("fields should not be numbers!");
-        event.preventDefault();
-        isValidTrue=false;
-    }
     else if( name.value.length<3 || surName.value.length<3 ){
         alert("minimum 3 characters needed");
         event.preventDefault();
@@ -88,13 +83,23 @@ function validate(){
         event.preventDefault();
         isValidTrue=false; 
     }
-    else if( (!email.value.endsWith(email.value.match(/gmail.com/i))) && !(email.value.endsWith(email.value.match(/qualminds.com/i))) ){
+    else if( (!email.value.endsWith(email.value.match(/gmail.com/i))) && !(email.value.endsWith(email.value.match           (/qualminds.com/i))) ){
         alert("allow only gmail and qualminds emails");
         event.preventDefault();
         isValidTrue=false;
     }
-    else if( name.value.includes(name.value.match(/ /g)) || surName.value.includes(surName.value.match(/ /g)) ||email.value.includes(email.value.match(/ /g)) ){
+    else if( name.value.match(/ /g) || surName.value.match(/ /g) || email.value.match(/ /g) ){
         alert("white spaces are not allowed");
+        event.preventDefault();
+        isValidTrue=false;
+    }
+    else if( name.value.match(/[0-9]/g) || surName.value.match(/[0-9]/g)){
+        alert("Name and surName should not be a numbers");
+        event.preventDefault();
+        isValidTrue=false;
+    }
+    else if( name.value.match(/[~ ! @ # $ % ^ & * _ + - = < > ? . , ' " : ; | /]/g) || surName.value.match(/[~ ! @ # $      % ^ & * _ + - = < > ? . , ' " : ; | /]/g)){
+        alert("Name and surName should not contain any special characters");
         event.preventDefault();
         isValidTrue=false;
     }
