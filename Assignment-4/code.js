@@ -189,11 +189,11 @@ function update(index) {
         email
     };
 
-    // if(validate())
-    // {
+    if(validate())
+    {
     setData();
     table();
-    // }
+    }
     
 }
 
