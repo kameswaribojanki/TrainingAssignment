@@ -64,6 +64,10 @@ function validate(){
     let surName=document.getElementById("surName");
     let email = document.getElementById("email");
 
+    // let name = document.getElementById("updatedName");
+    // let surName=document.getElementById("updatedSurName");
+    // let email = document.getElementById("updatedEmail");
+
     if (name.value == "" || surName.value=="" || email.value=="") {
         alert("please fill the details!");
         event.preventDefault();
@@ -135,15 +139,15 @@ function editFn(index){
     <div class="contacts">
         <div class="contact-div1">
             <label>Name</label>
-            <input type="text" value="${details[index].name}" placeholder="Update Your Name" id="updatedName">
+            <input type="text" value="${details[index].name}" placeholder="Update Your Name" id="name">
         </div>
         <div class="contact-div2">
             <label>Surame</label>
-            <input type="text" value="${details[index].surName}" placeholder="Update Your Surname" id="updatedSurName">
+            <input type="text" value="${details[index].surName}" placeholder="Update Your Surname" id="surName">
         </div>
         <div class="contact-div3">
             <label>Email address</label>
-            <input type="email" value="${details[index].email}" placeholder="Update Ypur Email" id="updatedEmail">
+            <input type="email" value="${details[index].email}" placeholder="Update Ypur Email" id="email">
         </div>
     </div>
     <div class="button-div">
@@ -155,12 +159,17 @@ function editFn(index){
 }
 
 function update(index) {
+    debugger
     event.preventDefault();
-    let updatedName = document.getElementById("updatedName");
-    let updatedSurname=document.getElementById("updatedSurName");
-    let updatedEmail = document.getElementById("updatedEmail");
+    let name = document.getElementById("name");
+    let surName=document.getElementById("surName");
+    let email = document.getElementById("email");
 
-    let name=updatedName.value, surName=updatedSurname.value, email=updatedEmail.value;
+    details[index] = {
+        name:name.value,
+        surName:surName.value,
+        email:email.value
+    };
     let form1=`
     <div class="contact-div">
     <div class="contacts">
@@ -182,18 +191,12 @@ function update(index) {
     </div>
 </div>
     `;
-    document.getElementById("form").innerHTML=form1;
-    details[index] = {
-        name,
-        surName,
-        email
-    };
-
     if(validate())
     {
-    setData();
-    table();
+        setData();
+        table();
     }
+    document.getElementById("form").innerHTML=form1;
     
 }
 
