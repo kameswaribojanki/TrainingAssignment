@@ -226,11 +226,11 @@ main, footer{
     border: none;
     border-radius: 5px;
 }
-.contact-div .remove-div{
+/* .contact-div .remove-div{
     margin-top: 30px;
     cursor: pointer;
     text-align: center;
-}
+} */
 .contact .button1{
     width: 100%;
     text-align: center;
