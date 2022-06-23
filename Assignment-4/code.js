@@ -1,3 +1,4 @@
+//hamburger menu section
 let hamburger=document.querySelector(".menu-icon");
 let nav=document.querySelector(".menu-links");
 hamburger.addEventListener("click",()=>{
@@ -9,8 +10,7 @@ hamburger.addEventListener("click",()=>{
     }
 })
 
-
-
+//table creation and insertion
 function table() {
     let table = `<table class="table">
         <thead>
@@ -43,9 +43,11 @@ function table() {
 
 var form=document.getElementById("form");
 form.addEventListener("submit",store);
+
 details = [];
 getData();
 table();
+
 function getData(){
     let Data = localStorage.getItem("details");
     if (Data) {
@@ -54,9 +56,11 @@ function getData(){
         setData();
     };
 };
+
 function setData() {
     localStorage.setItem("details", JSON.stringify(details));
 };
+
 //VALIDATE FUNCTION  
 function validate(){
     let isValidTrue=true;
@@ -64,21 +68,15 @@ function validate(){
     let surName=document.getElementById("surName");
     let email = document.getElementById("email");
 
-    // let name = document.getElementById("updatedName");
-    // let surName=document.getElementById("updatedSurName");
-    // let email = document.getElementById("updatedEmail");
-
     if (name.value == "" || surName.value=="" || email.value=="") {
         alert("please fill the details!");
         event.preventDefault();
         isValidTrue=false;
-
     }
     else if( (!isNaN(name.value)) || (!isNaN(surName.value)) ){
         alert("fields should not be numbers!");
         event.preventDefault();
         isValidTrue=false;
-
     }
     else if(name.value.length<3 || surName.value.length<3){
         alert("minimum 3 characters needed");
@@ -88,18 +86,17 @@ function validate(){
     else if(name.value.length>10 || surName.value.length>10){
         alert("maximum 10 characters allowed");
         event.preventDefault();
-        isValidTrue=false;
-      
+        isValidTrue=false; 
     }
     else if((!(email.value).endsWith((email.value).match(/gmail.com/i))) && !((email.value).endsWith((email.value).match(/qualminds.com/i)))){
         alert("allow only gmail and qualminds emails");
         event.preventDefault();
         isValidTrue=false;
-      
-
     }
     return isValidTrue;
 }
+
+//store data to localStorage and table
 function store(){
     let name = document.getElementById("name");
     let surName=document.getElementById("surName");
@@ -124,6 +121,7 @@ function store(){
 }
 
 
+//delete data to localStorage and table
 function deletFn(index){
     alert("perform delete operation");
     details.splice(index, 1);
@@ -131,7 +129,7 @@ function deletFn(index){
     table();
 }
 
-
+//update data in localStorage and table
 function editFn(index){
     alert("perform update operation");
     let editForm=`
@@ -197,7 +195,6 @@ function update(index) {
         table();
     }
     document.getElementById("form").innerHTML=form1;
-    
 }
 
 
