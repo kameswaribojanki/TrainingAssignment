@@ -157,7 +157,6 @@ function editFn(index){
 }
 
 function update(index) {
-    debugger
     event.preventDefault();
     let name = document.getElementById("name");
     let surName=document.getElementById("surName");
