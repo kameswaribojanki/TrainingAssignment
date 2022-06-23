@@ -68,32 +68,32 @@ function validate(){
     let surName=document.getElementById("surName");
     let email = document.getElementById("email");
 
-    if (name.value == "" || surName.value=="" || email.value=="") {
+    if ( name.value == "" || surName.value=="" || email.value=="" ) {
         alert("please fill the details!");
         event.preventDefault();
         isValidTrue=false;
     }
-    else if( (!isNaN(name.value)) || (!isNaN(surName.value)) ){
+    else if( !isNaN(name.value) || !isNaN(surName.value) ){
         alert("fields should not be numbers!");
         event.preventDefault();
         isValidTrue=false;
     }
-    else if(name.value.length<3 || surName.value.length<3){
+    else if( name.value.length<3 || surName.value.length<3 ){
         alert("minimum 3 characters needed");
         event.preventDefault();
         isValidTrue=false;
     }
-    else if(name.value.length>10 || surName.value.length>10){
+    else if( name.value.length>10 || surName.value.length>10 ){
         alert("maximum 10 characters allowed");
         event.preventDefault();
         isValidTrue=false; 
     }
-    else if((!(email.value).endsWith((email.value).match(/gmail.com/i))) && !((email.value).endsWith((email.value).match(/qualminds.com/i)))){
+    else if( (!email.value.endsWith(email.value.match(/gmail.com/i))) && !(email.value.endsWith(email.value.match(/qualminds.com/i))) ){
         alert("allow only gmail and qualminds emails");
         event.preventDefault();
         isValidTrue=false;
     }
-    else if((name.value).includes((name.value).match(/ /g)) || (surName.value).includes((surName.value).match(/ /g)) ||(email.value).includes((email.value).match(/ /g))){
+    else if( name.value.includes(name.value.match(/ /g)) || surName.value.includes(surName.value.match(/ /g)) ||email.value.includes(email.value.match(/ /g)) ){
         alert("white spaces are not allowed");
         event.preventDefault();
         isValidTrue=false;
