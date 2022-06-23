@@ -429,7 +429,7 @@ table button{
     .product{
         width: 25%;
     }
-    .contact-div{
+    /* .contact-div{
         width: 100%;
         display: flex;
         align-items: flex-end;
@@ -464,7 +464,20 @@ table button{
     }
     .contact i{
         margin-left: 10px;
+    } */
+    .contacts{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-right: 50px;
     }
+    .contact-div1, .contact-div2, .contact-div3{
+        width: 32%;
+    }
+    /* .contact-div div>input[type="text"],input[type="email"]{
+        padding: 15px 90px 15px 10px;
+        width: 95%;
+    } */
     .footer-div1, .footer-div2, .footer-div3, .footer-div4, .footer-div5{
         width:20%;
         padding-right: 20px;
@@ -477,10 +490,10 @@ table button{
     }
 }
 @media screen and (min-width: 1500px){
-    .contact-div div>input[type="text"],input[type="email"]{
+    /* .contact-div div>input[type="text"],input[type="email"]{
         padding: 15px 250px 15px 10px;
     }
     .contact .button2{
         width: 15%;
-    }
+    } */
 }

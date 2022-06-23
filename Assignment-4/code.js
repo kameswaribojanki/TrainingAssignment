@@ -57,7 +57,9 @@ function getData(){
 function setData() {
     localStorage.setItem("details", JSON.stringify(details));
 };
-function store(){
+//VALIDATE FUNCTION  
+function validate(){
+    let isValidTrue=true;
     let name = document.getElementById("name");
     let surName=document.getElementById("surName");
     let email = document.getElementById("email");
@@ -65,33 +67,48 @@ function store(){
     if (name.value == "" || surName.value=="" || email.value=="") {
         alert("please fill the details!");
         event.preventDefault();
-        return
+        isValidTrue=false;
+
     }
     else if( (!isNaN(name.value)) || (!isNaN(surName.value)) ){
         alert("fields should not be numbers!");
         event.preventDefault();
-        return
+        isValidTrue=false;
+
     }
     else if(name.value.length<3 || surName.value.length<3){
         alert("minimum 3 characters needed");
         event.preventDefault();
-        return
+        isValidTrue=false;
     }
     else if(name.value.length>10 || surName.value.length>10){
         alert("maximum 10 characters allowed");
         event.preventDefault();
-        return
+        isValidTrue=false;
+      
     }
     else if((!(email.value).endsWith((email.value).match(/gmail.com/i))) && !((email.value).endsWith((email.value).match(/qualminds.com/i)))){
         alert("allow only gmail and qualminds emails");
         event.preventDefault();
-        return
+        isValidTrue=false;
+      
+
     }
+    return isValidTrue;
+}
+function store(){
+    let name = document.getElementById("name");
+    let surName=document.getElementById("surName");
+    let email = document.getElementById("email");
+
     let data = {
         name: name.value,
         surName:surName.value,
         email: email.value
     };
+    
+    if(validate())
+    {
     details.push(data);
     setData();
     table();
@@ -99,6 +116,7 @@ function store(){
     surName.value="";
     email.value = "";
     event.preventDefault();
+    }
 }
 
 
@@ -142,13 +160,7 @@ function update(index) {
     let updatedSurname=document.getElementById("updatedSurName");
     let updatedEmail = document.getElementById("updatedEmail");
 
-    details[index] = {
-        name: updatedName.value,
-        surName:updatedSurname.value,
-        email: updatedEmail.value
-    };
-    setData();
-    table();
+    let name=updatedName.value, surName=updatedSurname.value, email=updatedEmail.value;
     let form1=`
     <div class="contact-div">
     <div class="contacts">
@@ -171,6 +183,18 @@ function update(index) {
 </div>
     `;
     document.getElementById("form").innerHTML=form1;
+    details[index] = {
+        name,
+        surName,
+        email
+    };
+
+    // if(validate())
+    // {
+    setData();
+    table();
+    // }
+    
 }
 
 
