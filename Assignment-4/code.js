@@ -94,7 +94,7 @@ function validate(){
         isValidTrue=false;
     }
     else if( name.value.match(/[0-9]/g) || surName.value.match(/[0-9]/g)){
-        alert("Name and surName should not be a numbers");
+        alert("Name and surName should not contains numbers");
         event.preventDefault();
         isValidTrue=false;
     }
