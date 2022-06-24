@@ -279,6 +279,13 @@ table button{
     border: none;
     background-color: white;
 }
+.errorMsg{
+    text-align: center;
+    color: yellow;
+}
+.table-div{
+    overflow-y: auto;
+}
 /* contact section end */
 /* footer section start */
 .footer{

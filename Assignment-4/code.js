@@ -1,15 +1,16 @@
 //hamburger menu section
-let hamburger=document.querySelector(".menu-icon");
-let nav=document.querySelector(".menu-links");
-hamburger.addEventListener("click",()=>{
-    if(nav.style.display == "block"){
-        nav.style.display="none";
+let hamburger = document.querySelector(".menu-icon");
+let nav = document.querySelector(".menu-links");
+hamburger.addEventListener("click", () => {
+    if (nav.style.display == "block") {
+        nav.style.display = "none";
     }
-    else{
-        nav.style.display="block";
+    else {
+        nav.style.display = "block";
     }
 })
 
+let buttonContainer = document.querySelector(".button-div");
 //table creation and insertion
 function table() {
     let table = `<table class="table">
@@ -23,8 +24,8 @@ function table() {
                 </tr>
         </thead>
         <tbody>`;
-            for (let i = 0; i < details.length; i++){
-                table = table + `<tr>
+    for (let i = 0; i < details.length; i++) {
+        table = table + `<tr>
             <td>${i + 1}</td>
             <td>${details[i].name}</td>
             <td>${details[i].surName}</td>
@@ -33,22 +34,22 @@ function table() {
                 <button  onClick="deletFn(${i})"><i class="fa-solid fa-trash"></i></button>
             </td>
             </tr> `;
-            };
-            table = table+`</tbody>
+    };
+    table = table + `</tbody>
     </table>`;
     document.getElementById("table").innerHTML = table;
 };
 
 
 
-var form=document.getElementById("form");
-form.addEventListener("submit",store);
+var form = document.getElementById("form");
+form.addEventListener("submit", store);
 
 details = [];
 getData();
 table();
 
-function getData(){
+function getData() {
     let Data = localStorage.getItem("details");
     if (Data) {
         details = JSON.parse(Data);
@@ -59,80 +60,126 @@ function getData(){
 
 function setData() {
     localStorage.setItem("details", JSON.stringify(details));
+    let name = document.getElementById("name").value = "";
+    let surName = document.getElementById("surName").value ="";
+    let email = document.getElementById("email").value = "";
+
 };
 
 //VALIDATE FUNCTION  
-function validate(){
-    let isValidTrue=true;
-    let name = document.getElementById("name");
-    let surName=document.getElementById("surName");
-    let email = document.getElementById("email");
+function validate() {
+    let isValidTrue = false;
+    let name = document.getElementById("name").value;
+    let surName = document.getElementById("surName").value;
+    let email = document.getElementById("email").value;
+    let errMsg = document.querySelectorAll(".errorMsg");
 
-    if ( name.value == "" || surName.value=="" || email.value=="" ) {
-        alert("please fill the details!");
-        event.preventDefault();
-        isValidTrue=false;
+
+    if (name == "") {
+        errMsg[0].textContent = "name can't be empty!";
+        return isValidTrue;
     }
-    else if( name.value.length<3 || surName.value.length<3 ){
-        alert("minimum 3 characters needed");
-        event.preventDefault();
-        isValidTrue=false;
+    else if (name.length < 3) {
+        errMsg[0].textContent = "minimum 3 characters needed";
+        return isValidTrue;
     }
-    else if( name.value.length>10 || surName.value.length>10 ){
-        alert("maximum 10 characters allowed");
-        event.preventDefault();
-        isValidTrue=false; 
+    else if (name.length > 10) {
+        errMsg[0].textContent = "maximum 10 characters allowed";
+        return isValidTrue;
     }
-    else if( (!email.value.endsWith(email.value.match(/gmail.com/i))) && !(email.value.endsWith(email.value.match           (/qualminds.com/i))) ){
-        alert("allow only gmail and qualminds emails");
-        event.preventDefault();
-        isValidTrue=false;
+    else if (name.match(/ /g)) {
+        errMsg[0].textContent = "white spaces are not allowed";
+        return isValidTrue;
     }
-    else if( name.value.match(/ /g) || surName.value.match(/ /g) || email.value.match(/ /g) ){
-        alert("white spaces are not allowed");
-        event.preventDefault();
-        isValidTrue=false;
+    else if (name.match(/[0-9]/g)) {
+        errMsg[0].textContent = "Name should not contains numbers";
+        return isValidTrue;
     }
-    else if( name.value.match(/[0-9]/g) || surName.value.match(/[0-9]/g)){
-        alert("Name and surName should not contains numbers");
-        event.preventDefault();
-        isValidTrue=false;
+    else if (name.match(/[~ ! @ # $ % ^ & * _ + - = < > ? . , ' " : ; | /]/g)) {
+        errMsg[0].textContent = "Name should not contain any special characters"
+        return isValidTrue;
     }
-    else if( name.value.match(/[~ ! @ # $ % ^ & * _ + - = < > ? . , ' " : ; | /]/g) || surName.value.match(/[~ ! @ # $      % ^ & * _ + - = < > ? . , ' " : ; | /]/g)){
-        alert("Name and surName should not contain any special characters");
-        event.preventDefault();
-        isValidTrue=false;
+    else {
+        errMsg[0].textContent = "";
     }
-    return isValidTrue;
+
+
+
+    if (surName == "") {
+        errMsg[1].textContent = "name can't be empty!";
+        return isValidTrue;
+    }
+    else if (surName.length < 3) {
+        errMsg[1].textContent = "minimum 3 characters needed";
+        return isValidTrue;
+    }
+    else if (surName.length > 10) {
+        errMsg[1].textContent = "maximum 10 characters allowed";
+        return isValidTrue;
+    }
+    else if (surName.match(/ /g)) {
+        errMsg[1].textContent = "white spaces are not allowed";
+        return isValidTrue;
+    }
+    else if (surName.match(/[0-9]/g)) {
+        errMsg[1].textContent = "Name should not contains numbers";
+        return isValidTrue;
+    }
+    else if (surName.match(/[~ ! @ # $ % ^ & * _ + - = < > ? . , ' " : ; | /]/g)) {
+        errMsg[1].textContent = "Name should not contain any special characters"
+        return isValidTrue;
+    }
+    else {
+        errMsg[1].textContent = "";
+    }
+
+
+
+
+
+    if (email == "") {
+        errMsg[2].textContent = "email can't be empty!";
+        return isValidTrue;
+    }
+    else if ((!email.endsWith(email.match(/gmail.com/i))) && !(email.endsWith(email.match(/qualminds.com/i)))) {
+        errMsg[2].textContent = "gmail and qualminds emails are allowed";
+        return isValidTrue;
+    }
+
+    else {
+        errMsg[2].textContent = "";
+    }
+    return isValidTrue = true;
 }
 
 //store data to localStorage and table
-function store(){
-    let name = document.getElementById("name");
-    let surName=document.getElementById("surName");
-    let email = document.getElementById("email");
-
+function store() {
+    let name = document.getElementById("name").value;
+    let surName = document.getElementById("surName").value;
+    let email = document.getElementById("email").value;
+    email = email.toLowerCase();
     let data = {
-        name: name.value,
-        surName:surName.value,
-        email: email.value
+        name,
+        surName,
+        email
     };
-    
-    if(validate())
-    {
-    details.push(data);
-    setData();
-    table();
-    name.value = "";
-    surName.value="";
-    email.value = "";
-    event.preventDefault();
+
+    if (validate()) {
+        for(i=0;i<details.length;i++){
+            if(details[i].email==email){
+                alert("email allready exist");
+                return false;
+            }
+        }
+        details.push(data);
+        setData();
+        table();
     }
 }
 
 
 //delete data to localStorage and table
-function deletFn(index){
+function deletFn(index) {
     alert("perform delete operation");
     details.splice(index, 1);
     setData();
@@ -140,70 +187,35 @@ function deletFn(index){
 }
 
 //update data in localStorage and table
-function editFn(index){
+function editFn(index) {
     alert("perform update operation");
-    let editForm=`
-    <div class="contact-div">
-    <div class="contacts">
-        <div class="contact-div1">
-            <label>Name</label>
-            <input type="text" value="${details[index].name}" placeholder="Update Your Name" id="name">
-        </div>
-        <div class="contact-div2">
-            <label>Surame</label>
-            <input type="text" value="${details[index].surName}" placeholder="Update Your Surname" id="surName">
-        </div>
-        <div class="contact-div3">
-            <label>Email address</label>
-            <input type="email" value="${details[index].email}" placeholder="Update Ypur Email" id="email">
-        </div>
-    </div>
-    <div class="button-div">
-        <input type="submit" value="update Details" class="button1" onClick="update(${index})">
-    </div>
-</div>
-    `;
-    document.getElementById("form").innerHTML = editForm;
+    let name = document.querySelector("#name");
+    let surname = document.querySelector("#surName");
+    let email = document.querySelector("#email");
+
+    name.value = `${details[index].name}`;
+    surname.value = `${details[index].surName}`
+    email.value = `${details[index].email}`;
+
+    buttonContainer.innerHTML = `<input type="submit" value="update Details" class="button1" onClick="update(${index})">`
 }
 
 function update(index) {
-    event.preventDefault();
-    let name = document.getElementById("name");
-    let surName=document.getElementById("surName");
-    let email = document.getElementById("email");
-
+    debugger
+    let name = document.getElementById("name").value;
+    let surName = document.getElementById("surName").value;
+    let email = document.getElementById("email").value;
+    email = email.toLowerCase();
     details[index] = {
-        name:name.value,
-        surName:surName.value,
-        email:email.value
+        name,
+        surName,
+        email
     };
-    let form1=`
-    <div class="contact-div">
-    <div class="contacts">
-        <div class="contact-div1">
-            <label>Name</label>
-            <input type="text" placeholder="George" id="name">
-        </div>
-        <div class="contact-div2">
-            <label>Surame</label>
-            <input type="text" placeholder="Stone" id="surName">
-        </div>
-        <div class="contact-div3">
-            <label>Email address</label>
-            <input type="email" placeholder="george.stone@gmail.com" id="email">
-        </div>
-    </div>
-    <div class="button-div">
-        <input type="submit" value="Add Friend" class="button1">
-    </div>
-</div>
-    `;
-    if(validate())
-    {
+    if (validate()) {
         setData();
         table();
+        buttonContainer.innerHTML = `<input type="submit" value="Add Friend" class="button1">`
     }
-    document.getElementById("form").innerHTML=form1;
 }
 
 
