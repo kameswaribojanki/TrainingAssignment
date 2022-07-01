@@ -212,6 +212,15 @@ function update(index) {
         email
     };
     if (validate()) {
+        for(i=0;i<details.length;i++){
+            if(index!==i){
+                if(details[i].email==email){
+                    alert("updated email allready exist");
+                    event.preventDefault();
+                    return false;
+                }
+            }
+        }
         setData();
         table();
         buttonContainer.innerHTML = `<input type="submit" value="Add Friend" class="button1">`

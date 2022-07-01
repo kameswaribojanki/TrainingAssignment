@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>List</title>
+    <style>
+        input{
+            padding: 10px;
+            border-radius: 5px;
+        }
+        button{
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        .form{
+            margin: auto;
+            border: 1px solid red;
+            background-color: yellow;
+            width: 30%;
+            padding: 30px;
+            border-radius: 5px;
+        }
+        .form-div{
+            display:  flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+        .actions{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .actions i{
+            padding-left: 20px;
+        }
+        .actions li{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form">
+        <div class="form-div">
+            <div>
+                <label>Enter Name:</label>
+                <input type="text" placeholder="Enter Name" class="input-item">
+            </div>
+            <div>
+                <button class="add-items">Store</button>
+            </div>
+        </div>
+        <div>
+            <ul class="list-items"></ul>
+        </div>
+    </div>
+    <script>
+        let items=[];
+       $('.add-items').on('click',function(event){
+           event.preventDefault();
+           var btnval=$(this).text();
+           console.log(btnval);
+           let val=$('.input-item').val();
+           if(val==""){
+               alert('Please enter the name');
+               return;
+           }
+           if(btnval.toLowerCase()=='store'){
+               addItemsToList(val);
+           }
+           else{
+               updateItemsInList();
+           } 
+       })
+       function addItemsToList(val){
+            $('.list-items').append(`<div class="actions">
+            <li>${val}</li>
+            <i class="fa-solid fa-trash id="delet"></i>
+            </div>`);
+           items.push(val);
+           $('.input-item').val('');
+           console.log(items);
+        } 
+
+
+       $('.list-items').on('click',function(event){
+           event.preventDefault();
+        let value=$(event.target).text();
+        $('.input-item').val(value);
+        $('.add-items').text('Update');
+       })
+
+       function updateItemsInList(){
+            let val=$('.input-item').val();
+            addItemsToList(val);
+            $('.add-items').text('Store');
+       }
+    </script>
+</body>
+</html>

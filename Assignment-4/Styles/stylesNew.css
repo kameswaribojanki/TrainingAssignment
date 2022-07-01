@@ -472,6 +472,13 @@ table button{
     .contact i{
         margin-left: 10px;
     } */
+    .send-button{
+        width: 100%;
+        text-align: center;
+    }
+    .contact .button2{
+        width: 16%;
+    }
     .contacts{
         width: 100%;
         display: flex;
