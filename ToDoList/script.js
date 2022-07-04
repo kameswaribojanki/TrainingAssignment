@@ -26,7 +26,7 @@ $(".item-list").on("click",".li-item",function (event) {
     $(".input-item").val(value);
     $(".btn").text("update");
 });
-$(document).on("click", ".remove", function () {
+$(".item-list").on("click", ".remove", function () {
         var currentIndex = items.indexOf($(this).parent("li").text());
         $(this).parent("li").remove();
         items.splice(currentIndex, 1);
