@@ -29,18 +29,13 @@ form .form-input{
     padding-right: 25%;
 }
 .form-table{
+    width: 50%;
     margin: auto;
     padding: 10px;
 }
 h1{
     text-align: center;
     color: red;
-}
-/* .form-container{
-    display: flex;
-} */
-.form-input-container,.form-table{
-    width: 50%;
 }
 .form-button{
     text-align: center;
