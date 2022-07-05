@@ -1,0 +1,57 @@
+*, *::after, *::before{ 
+    box-sizing: border-box; 
+}
+table,th,td{
+    border: 1px solid red;
+    border-collapse: collapse;
+}
+thead{
+    background-color: blue;
+    color: white;
+}
+th,td{
+    padding: 10px;
+}
+tbody{
+    text-align: center;
+}
+form{
+    width: 50%;
+    background-color: yellow;
+    border: 1px solid red;
+    margin: auto;
+    border-radius: 5px;
+}
+form .form-input{
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 25%;
+}
+.form-table{
+    margin: auto;
+    padding: 10px;
+}
+h1{
+    text-align: center;
+    color: red;
+}
+/* .form-container{
+    display: flex;
+} */
+.form-input-container,.form-table{
+    width: 50%;
+}
+.form-button{
+    text-align: center;
+    padding: 10px;
+}
+input[type="text"],input[type="number"]{
+    padding: 10px;
+    width: 500px;
+}
+input[type="submit"]{
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 10px 50px;
+}
