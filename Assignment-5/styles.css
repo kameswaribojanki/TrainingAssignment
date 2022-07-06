@@ -38,6 +38,9 @@ body{
 .banner{
     padding:80px 0px;
 }
+.banner img{
+    max-width: 500px;
+}
 .setting-section, .new-inventory, .offer-section, .footer{
     padding:80px 150px; 
 }
@@ -77,11 +80,26 @@ body{
 .main-section h1, .setting-section h1{
     font-weight: 700;
 }
-.main-section .btn{
-    background-color: #E7E3E3;
-    border-radius: 30px;
-    font-weight: 800;
+#btn {
+    background-color: #e6e6e6;
+    width: 20rem;
+    padding: 5px;
+    border-radius: 40px;
+   display: flex;
+   justify-content: center;
 }
+button {
+    background-color: #e6e6e6;
+    padding: 10px 30px;
+    border: none;
+    font-weight: bold;
+}
+.custom-btn {
+    background-color: white;
+    border-radius: 40px;
+    font-size: 0.95rem;
+    font-weight: bolder;
+}  
 .main-section h5,.new-inventory h3{
     font-weight: 800;
 }
@@ -92,6 +110,26 @@ body{
 .card{
     margin: 0 1em;
     width:calc(60%/3);
+}
+.card-header{
+    background-color:#007cc3;
+}
+.card-footer{
+  
+}
+.card img{
+    max-width:300px;
+}
+.card .font{
+    font-weight: 800;
+}
+.card .btn{
+    width: 100%;
+    border-radius: 30px;
+}
+.card1 .btn{
+    border-radius: 30px;
+    padding: 10px 30px;
 }
 .card1{
     margin: 0 1em;
@@ -153,5 +191,22 @@ body{
 .footer i{
     border: 1px solid #CFCBCB;
     border-radius: 50%;
+}
+
+@media screen and (min-width: 1200px){
+    .banner img{
+        max-width: 350px;
+    }
+    .card img{
+        max-width: 200px;
+    }
+}
+@media screen and (min-width: 1600px){
+    .banner img{
+        max-width: 500px;
+    }
+    .card img{
+        max-width: 300px;
+    }
 }
 

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>ProductDetails</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="styles.css">   
 </head>
@@ -12,16 +12,16 @@
     <form action="#" id="form">
         <h1>Products Table</h1>
             <div class="form-input">
-                <label>Product Name:</label>
-                <input type="text" id="name">
+                <label for="pname">Product Name:</label>
+                <input type="text" id="name" name="pname">
             </div>
             <div class="form-input">
-                <label>Quantity:</label>
-                <input type="number" readonly value="1" id="qty">
+                <label for="quantity">Quantity:</label>
+                <input type="number" readonly value="1" id="qty" name="quantity">
             </div>
             <div class="form-input">
-                <label>Product Price:</label>
-                <input type="number" id="cost">
+                <label for="pcost">Product Price:</label>
+                <input type="text" id="cost" name="pcost">
             </div>
             <div class="form-button">
                 <input type="submit" value="submit">

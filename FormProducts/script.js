@@ -11,6 +11,10 @@ $('#form').submit((e) => {
         alert("please enter the data");
         return;
     }
+    else if(!Number(product.productCost)){
+        alert("please enter number");
+        return;
+    }
     products.push(product);
     $('#name').val("");
     $('#cost').val("");
