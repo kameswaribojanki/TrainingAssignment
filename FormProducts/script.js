@@ -1,6 +1,7 @@
 let products = [];
 let index=0;
-let total;
+let total=0;
+
 $('#form').submit((e) => {
     e.preventDefault();
     const product = {
@@ -49,13 +50,23 @@ $("table").on("click",".deleteProduct",(e)=>{
     $(event.target).parent().parent().remove();
     let index=$(event.target).parent().parent().index();
     products.splice(index,1);
-    let total=$(".total").text();
-    $("table tfoot td").text(total);
+    clearTableData();
+    insertInToTable(products);
 })
 
 function clearTableData(){
     $("table tbody").empty();
 }
-$(".quantity").on("change",function(){
-    console.log("change happends");
-});
+  
+$("tbody").on("input","td .quantity",function(e){
+    let utotal=0;
+    let value=$(this).val();
+    let index=$(event.target).parent().parent().index();
+    for(let i=0;i<products.length;i++){
+        if(index==i){
+            products[i].quantity=value;
+        }
+    }
+    clearTableData();
+    insertInToTable(products);
+})
