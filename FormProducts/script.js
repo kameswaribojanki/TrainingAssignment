@@ -52,10 +52,14 @@ $("table").on("click",".deleteProduct",(e)=>{
     products.splice(index,1);
     clearTableData();
     insertInToTable(products);
+    if($("tbody").text()==""){
+        $("tfoot td").text("");
+    }
 })
 
 function clearTableData(){
     $("table tbody").empty();
+    
 }
   
 $("tbody").on("input","td .quantity",function(e){
