@@ -6,11 +6,12 @@ $("button").click(function () {
     $("buttton").toggleClass("custom-btn");
   });
 customQuotes();
+newInventory();
 function customQuotes(){
   $.getJSON("favorites.json",(data)=>{
     console.log(data.vehicles);
     for(let i=0;i<data.vehicles.length;i++){
-      $(".card").append(`
+      $(".card0").append(`
       <div class="card-header d-flex align-items-center justify-content-between p-3 bg-primary text-white">
       <h4>Custom Lease</h4>
       <i class="fa-solid fa-clipboard-check fs-3"></i>
@@ -47,4 +48,30 @@ function customQuotes(){
       `)
     }
   })
+}
+function newInventory(){
+    $.getJSON("inventory.json",(data)=>{
+        console.log(data.newModels);
+        for(let i=0;i<data.newModels.length;i++){
+            console.log(data.newModels[i].vehicles);
+          $(".card1").append(`
+          <div class="card-header">
+          <img src="${data.newModels[i].vehicles.photoURLs}" class="mx-auto d-block">
+      </div>
+      <div class="card-body ps-5 pe-5 pt-3 pb-3">
+         <p>${data.newModels[i].vehicles.year}</p>
+         <h3 class="text-primary">${data.newModels[i].vehicles.maker} CR-V LX</h3>
+         <P>Lease for $267.47 per month <i class="fa-solid fa-clock ps-1"></i></P>
+      </div>
+      <div class="card-footer bg-white d-flex justify-content-between align-items-center pt-3 pb-3 ps-5 pe-5">
+          <div>
+              <p>View All Offers <i class="fa-solid fa-circle-chevron-right ps-1"></i></p>
+          </div>
+          <div>
+              <button type="button" class="btn btn-primary">Explore</button>
+          </div>
+      </div>
+          `)
+        }
+      })
 }

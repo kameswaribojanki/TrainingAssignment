@@ -20,9 +20,7 @@ $('#form').submit((e) => {
     products.push(product);
     $('#name').val("");
     $('#cost').val("");
-    clearTableData();
-    insertInToTable(products);
-    insertInToCart(products);
+    render();
 })
 
 function insertInToTable(products){
@@ -51,9 +49,7 @@ $(".product-table").on("click",".deleteProduct",(e)=>{
     $(event.target).parent().parent().remove();
     let index=$(event.target).parent().parent().index();
     products.splice(index,1);
-    clearTableData();
-    insertInToTable(products);
-    insertInToCart(products);
+    render();
     if($(".product-table tbody").text()==""){
         $(".product-table tfoot td").text("");
     }
@@ -77,9 +73,7 @@ $(".product-table tbody").on("input","td .quantity",function(e){
             products[i].quantity=value;
         }
     }
-    clearTableData();
-    insertInToTable(products);
-    insertInToCart(products);
+    render();
 })
 
 $(".product-table tbody").on("click","td .fa-plus",function(e){
@@ -89,9 +83,7 @@ $(".product-table tbody").on("click","td .fa-plus",function(e){
             products[i].quantity=parseInt(products[i].quantity)+1;
         }
     }
-    clearTableData();
-    insertInToTable(products);
-    insertInToCart(products);
+    render();
 })
 
 $(".product-table tbody").on("click","td .fa-minus",function(e){
@@ -105,9 +97,7 @@ $(".product-table tbody").on("click","td .fa-minus",function(e){
             }
         }
     }
-    clearTableData();
-    insertInToTable(products);
-    insertInToCart(products);
+    render();
     if($(".product-table tbody").text()==""){
         $(".product-table tfoot td").text("");
     }
@@ -132,4 +122,10 @@ function insertInToCart(products){
         totalPrice+=quantity * productCost;
         $(".cart-table tfoot td").text(totalPrice);
     }
+}
+
+function render(){
+    clearTableData();
+    insertInToTable(products);
+    insertInToCart(products);
 }
