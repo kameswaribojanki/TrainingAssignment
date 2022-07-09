@@ -17,6 +17,10 @@ $('#form').submit((e) => {
         alert("please enter valid number");
         return;
     }
+    else if(!Number(product.quantity)|| product.quantity.match(/^-/)){
+        alert("please enter valid number");
+        return;
+    }
     products.push(product);
     $('#name').val("");
     $('#cost').val("");
@@ -28,12 +32,12 @@ function insertInToTable(products){
     for(let i=0; i<products.length; i++){
         productName = products[i].productName;
         quantity = products[i].quantity;
-        productCost = products[i].productCost;
+        productCost = Math.round(products[i].productCost);
         $(".product-table tbody").append(`
         <tr>
             <td>${i + 1}</td>
             <td>${productName}</td>
-            <td class="td2"><i class="fa-solid fa-minus"></i><input type="text" value="${quantity}" style="width:50px; padding:5px;text-align:center" class="quantity"><i class="fa-solid fa-plus"></i></td>
+            <td class="td2"><i class="fa-solid fa-minus"></i><input type="text" value="${quantity}" class="quantity"><i class="fa-solid fa-plus"></i></td>
             <td>${productCost}</td>
             <td class="total">${quantity * productCost}</td>
             <td><i class="fa-solid fa-trash deleteProduct"></i></td>
@@ -70,7 +74,12 @@ $(".product-table tbody").on("input","td .quantity",function(e){
     let index=$(event.target).parent().parent().index();
     for(let i=0;i<products.length;i++){
         if(index==i){
+            if(!Number(value) || value.match(/^-/) || value.includes(".")){
+                alert("hello");
+            }
+            else{
             products[i].quantity=value;
+            }
         }
     }
     render();
@@ -111,7 +120,7 @@ function insertInToCart(products){
     for(let i=0; i<products.length; i++){
         productName = products[i].productName;
         quantity = products[i].quantity;
-        productCost = products[i].productCost;
+        productCost = Math.round(products[i].productCost);
         $(".cart-table tbody").append(`
         <tr>
             <td class="td2">${quantity}<i class="fa-solid fa-xmark"></i></td>
