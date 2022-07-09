@@ -109,13 +109,10 @@ button {
 }
 .card0{
     margin: 0 1em;
-    width:calc(80%/5);
+    width:calc(70%/3);
 }
 .card-header{
     background-color:#007cc3;
-}
-.card-footer{
-  
 }
 .card img{
     max-width:300px;
