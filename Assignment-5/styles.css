@@ -103,13 +103,15 @@ button {
 .main-section h5,.new-inventory h3{
     font-weight: 800;
 }
-.cards-wraper{
-    display: flex;
-    justify-content: center;
+/* .cards-wraper-favorites,.cards-wraper-customQuotes{
+   padding: 30px 80px;
+} */
+#fav-cus{
+    padding: 30px 80px;
 }
 .card0{
     margin: 0 1em;
-    width:calc(70%/3);
+    width:calc(60%/3);
 }
 .card-header{
     background-color:#007cc3;

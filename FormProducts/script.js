@@ -29,6 +29,7 @@ $('#form').submit((e) => {
 
 function insertInToTable(products){
     let totalPrice=0;
+    let totalQuantity=0;
     for(let i=0; i<products.length; i++){
         productName = products[i].productName;
         quantity = products[i].quantity;
@@ -44,7 +45,9 @@ function insertInToTable(products){
         </tr>
         `);
         totalPrice+=quantity * productCost;
-        $(".product-table tfoot td").text(totalPrice);
+        $(".product-table tfoot .td1").text(totalPrice);
+        totalQuantity+=parseInt(quantity);
+        $(".product-table tfoot .td2").text(totalQuantity);
     }
 }
 

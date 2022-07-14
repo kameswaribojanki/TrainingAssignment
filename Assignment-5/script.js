@@ -123,7 +123,7 @@ function newInventory(){
       </div>
       <div class="card-body ps-5 pe-5 pt-3 pb-3">
          <p>${data.newModels[i].vehicles.year}</p>
-         <h3 class="text-primary">${data.newModels[i].vehicles.maker} ${data.newModels[i].vehicles.model} ${data.newModels[i].vehicles.trim}</h3>
+         <h3 class="text-primary">${data.newModels[i].vehicles.make} ${data.newModels[i].vehicles.model} ${data.newModels[i].vehicles.trim}</h3>
          <P>Lease for $267.47 per month <i class="fa-solid fa-clock ps-1"></i></P>
       </div>
       <div class="card-footer bg-white d-flex justify-content-between align-items-center pt-3 pb-3 ps-5 pe-5">
