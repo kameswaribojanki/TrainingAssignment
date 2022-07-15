@@ -78,7 +78,7 @@ $(".product-table tbody").on("input","td .quantity",function(e){
     for(let i=0;i<products.length;i++){
         if(index==i){
             if(!Number(value) || value.match(/^-/) || value.includes(".")){
-                alert("hello");
+                alert("negative and float values are not allowed");
             }
             else{
             products[i].quantity=value;

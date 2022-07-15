@@ -197,6 +197,9 @@ button {
 .card-body{
     height: 12rem;
 }
+.slick-next:before, .slick-prev:before {
+    
+}
 @media screen and (min-width: 1200px){
     .banner img{
         max-width: 350px;
@@ -205,6 +208,7 @@ button {
         max-width: 200px;
     }
 }
+
 @media screen and (min-width: 1600px){
     .banner img{
         max-width: 500px;
