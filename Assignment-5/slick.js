@@ -35,7 +35,7 @@ function favorites(){
           <i class="fa-regular fa-heart fs-3"></i>
       </div>
       <div class="card-body bg-light">
-          <h3>2022 ${data.vehicles[i].year} ${data.vehicles[i].transmission} ${data.vehicles[i].trim}</h3>
+          <h3 class="fs-4">2022 ${data.vehicles[i].year} ${data.vehicles[i].transmission} ${data.vehicles[i].trim}</h3>
           <p>${data.vehicles[i].transmission} ${data.vehicles[i].driveTrain}</p>
           <img src="${data.vehicles[i].photoURLs}" class="mx-auto d-block">
       </div>
@@ -66,7 +66,7 @@ function favorites(){
       </div>
           `)
         }
-        slider(".cards-wraper-favorites"); 
+        favInvSlider(".cards-wraper-favorites"); 
     })
 }
 
@@ -81,7 +81,7 @@ function customQuotes(){
           <i class="fa-solid fa-clipboard-check fs-3"></i>
       </div>
       <div class="card-body bg-light">
-          <h3>2022 ${data.vehicles[i].year} ${data.vehicles[i].transmission} ${data.vehicles[i].trim}</h3>
+          <h3 class="fs-4">2022 ${data.vehicles[i].year} ${data.vehicles[i].transmission} ${data.vehicles[i].trim}</h3>
           <p>${data.vehicles[i].transmission} ${data.vehicles[i].driveTrain}</p>
           <img src="${data.vehicles[i].photoURLs}" class="mx-auto d-block">
       </div>
@@ -141,7 +141,7 @@ function inventory(){
     </div>
         `)}
         
-        slider(".cards-wraper-inventory");
+        favInvSlider(".cards-wraper-inventory");
       });
     }
     
@@ -149,11 +149,29 @@ function inventory(){
       {
       $(elementClass).slick({
         dots: true,
-        infinite: true,
+        infinite: false,
         speed: 1000,
         slidesToShow: 3,
       slidesToScroll: 1,
         adaptiveHeight: true,
       });
     }
+
+
+
+
+    function favInvSlider(elementClass)
+    {
+    $(elementClass).slick({
+      dots: true,
+      infinite: false,
+      speed: 1000,
+      slidesToShow: 4,
+    slidesToScroll: 1,
+      adaptiveHeight: true,
+    });
+  }   
+
+
+
     });
