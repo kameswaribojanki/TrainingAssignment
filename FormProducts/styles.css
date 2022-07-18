@@ -28,7 +28,7 @@ tbody{
     text-align: center;
 }
 form{
-    width: 70%;
+    width: 80%;
     background-image: linear-gradient(#00AEFF,rgba(255, 255, 0, 0.46));
     border: 1px solid red;
     margin: auto;
@@ -68,3 +68,4 @@ input[type="submit"]{
 i{
     padding:5px;
 }
+
