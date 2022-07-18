@@ -1,16 +1,17 @@
-let items = [];
+var items = [];
 var indexid;
 $(".btn").on("click", function (event) {
     event.preventDefault();
-    var btnvalue = $(this).text();
+    var btnValue = $(this).text();
     var inputvalue = $(".input-item").val();
-    if(inputvalue==""){
+    if (inputvalue == "") {
         alert('Please enter value');
         return;
     }
-    if (btnvalue.toLowerCase() == "store") {
+    if (btnValue.toLowerCase() == "store") {
         addItemsToList(inputvalue);
-    } else {
+    }
+    else {
         updateItemsInList();
     }
 });
@@ -18,8 +19,7 @@ function addItemsToList(value) {
     items.push(value);
     readArrData(items);
 }
-
-$(".item-list").on("click",".li-item",function (event) {
+$(".item-list").on("click", ".li-item", function (event) {
     event.preventDefault();
     var value = $(this).text();
     indexid = items.indexOf(value);
@@ -27,10 +27,10 @@ $(".item-list").on("click",".li-item",function (event) {
     $(".btn").text("update");
 });
 $(".item-list").on("click", ".remove", function () {
-        var currentIndex = items.indexOf($(this).parent("li").text());
-        $(this).parent("li").remove();
-        items.splice(currentIndex, 1);
-      });
+    var currentIndex = items.indexOf($(this).parent("li").text());
+    $(this).parent("li").remove();
+    items.splice(currentIndex, 1);
+});
 function updateItemsInList() {
     var value = $(".input-item").val();
     items[indexid] = value;
@@ -39,8 +39,8 @@ function updateItemsInList() {
 }
 function readArrData(items) {
     $(".item-list").empty();
-    for (let i = 0; i < items.length; i++) {
-    $(".item-list").append(`<li class=""><span class="li-item">${items[i]}</span> <span class="remove"><i class="fa-solid fa-trash"></i></span></li>`);
+    for (var i = 0; i < items.length; i++) {
+        $(".item-list").append("<li class=\"\"><span class=\"li-item\">".concat(items[i], "</span> <span class=\"remove\"><i class=\"fa-solid fa-trash\"></i></span></li>"));
     }
     $(".input-item").val("");
 }

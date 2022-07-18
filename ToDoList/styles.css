@@ -4,13 +4,13 @@
 .container{
     width: 50%;
     margin: auto;
-    border: 1px solid red;
-    background-color: yellow;
+    border: 1px solid blue;
+    background-color: cyan;
     border-radius: 5px;
 }
 .heading{
     text-align: center;
-    color: red;
+    color: blue;
 }
 .data{
     text-align: center;
@@ -34,6 +34,9 @@ li{
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+li:nth-child(even){
+    background-color: #88DCDF;
 }
 .remove{
     cursor: pointer;
