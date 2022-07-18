@@ -13,11 +13,11 @@ $('#form').submit((e):void => {
         alert("please enter the data");
         return;
     }
-    else if(product.productCost<0){
+    else if(product.productCost<0 || !(Number(product.productCost))){
         alert("please enter valid number");
         return;
     }
-    else if(product.quantity<0){
+    else if(product.quantity<0 || !(Number(product.quantity))){
         alert("please enter valid number");
         return;
     }
@@ -78,7 +78,7 @@ $(".product-table tbody").on("input","td .quantity",function(e){
     let index:number=$(event.target).parent().parent().index();
     for(let i=0;i<products.length;i++){
         if(index==i){
-            if(value<0){
+            if(value<0 || !(Number(value))){
                 alert("negative and float values are not allowed");
             }
             else{
