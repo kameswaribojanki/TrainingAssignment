@@ -27,10 +27,14 @@ $(".item-list").on("click",".li-item",function (event) {
     $(".btn").text("update");
 });
 $(".item-list").on("click", ".remove", function () {
+    if (confirm('Are you sure you want to delete the record')) {
         var currentIndex = items.indexOf($(this).parent("li").text());
         $(this).parent("li").remove();
         items.splice(currentIndex, 1);
-      });
+    } else {
+        
+    }
+});
 function updateItemsInList() {
     var value = $(".input-item").val();
     items[indexid] = value;
