@@ -4,11 +4,11 @@ var total = 0;
 $('#form').submit(function (e) {
     e.preventDefault();
     var product = {
-        productName: $('#name').val(),
-        quantity: $('#qty').val(),
-        productCost: $('#cost').val()
+        productName: $('#name').val().toString(),
+        quantity: Number($('#qty').val()),
+        productCost: Number($('#cost').val())
     };
-    if (product.productName == "" || product.productCost == "") {
+    if (product.productName == "" || product.productCost == Number("")) {
         alert("please enter the data");
         return;
     }
@@ -56,50 +56,55 @@ function clearTableData() {
     $(".product-table tbody").empty();
     $(".cart-table tbody").empty();
 }
-// // $(".product-table tbody").on("input","td .quantity",function(e){
-// //     let utotal=0;
-// //     let value=$(this).val();
-// //     let index=$(event.target).parent().parent().index();
-// //     for(let i=0;i<products.length;i++){
-// //         if(index==i){
-// //             if(!Number(value) || value.match(/^-/) || value.includes(".")){
-// //                 alert("negative and float values are not allowed");
-// //             }
-// //             else{
-// //             products[i].quantity=value;
-// //             }
-// //         }
-// //     }
-// //     render();
-// // })
-// // $(".product-table tbody").on("click","td .fa-plus",function(e){
-// //     for(let i=0;i<products.length;i++){
-// //         let index=$(event.target).parent().parent().index();
-// //         if(index==i){
-// //             products[i].quantity=parseInt(products[i].quantity)+1;
-// //         }
-// //     }
-// //     render();
-// // })
-// // $(".product-table tbody").on("click","td .fa-minus",function(e){
-// //     for(let i=0;i<products.length;i++){
-// //         let index=$(event.target).parent().parent().index();
-// //         if(index==i){
-// //             products[i].quantity=parseInt(products[i].quantity)-1;
-// //             if(products[i].quantity=="0"){
-// //                 $(event.target).parent().parent().remove();
-// //                 products.splice(index,1);
-// //             }
-// //         }
-// //     }
-// //     render();
-// //     if($(".product-table tbody").text()==""){
-// //         $(".product-table tfoot td").text("");
-// //     }
-// //     if($(".cart-table tbody").text()==""){
-// //         $(".cart-table tfoot td").text("");
-// //     }
-// // })
+$(".product-table tbody").on("input", "td .quantity", function (e) {
+    console.log($(this).val());
+    var utotal = 0;
+    var value = Number($(this).val());
+    var index = $(event.target).parent().parent().index();
+    for (var i = 0; i < products.length; i++) {
+        if (index == i) {
+            if (value < 0) {
+                alert("negative and float values are not allowed");
+            }
+            else {
+                products[i].quantity = value;
+            }
+        }
+    }
+    render();
+});
+$(".product-table tbody").on("click", "td .fa-plus", function (e) {
+    e.preventDefault();
+    console.log("plus");
+    for (var i = 0; i < products.length; i++) {
+        var index_1 = $(event.target).parent().parent().index();
+        if (index_1 == i) {
+            products[i].quantity = parseInt(products[i].quantity) + 1;
+        }
+    }
+    render();
+});
+$(".product-table tbody").on("click", "td .fa-minus", function (e) {
+    e.preventDefault();
+    console.log("minus");
+    for (var i = 0; i < products.length; i++) {
+        var index_2 = $(event.target).parent().parent().index();
+        if (index_2 == i) {
+            products[i].quantity = parseInt(products[i].quantity) - 1;
+            if (products[i].quantity == "0") {
+                $(event.target).parent().parent().remove();
+                products.splice(index_2, 1);
+            }
+        }
+    }
+    render();
+    if ($(".product-table tbody").text() == "") {
+        $(".product-table tfoot td").text("");
+    }
+    if ($(".cart-table tbody").text() == "") {
+        $(".cart-table tfoot td").text("");
+    }
+});
 function insertInToCart(products) {
     var totalPrice = 0;
     for (var i = 0; i < products.length; i++) {
