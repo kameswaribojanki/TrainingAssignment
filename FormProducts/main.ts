@@ -1,5 +1,5 @@
-let products = [];
-let index=0;
+let products:string = [];
+let index:number=0;
 let total=0;
 
 $('#form').submit((e) => {
@@ -53,20 +53,16 @@ function insertInToTable(products){
 
 $(".product-table").on("click",".deleteProduct",(e)=>{
     e.preventDefault();
-    if (confirm('Are you sure you want to delete the record')) {
-        $(event.target).parent().parent().remove();
-        let index=$(event.target).parent().parent().index();
-        products.splice(index,1);
-        render();
-        if($(".product-table tbody").text()==""){
-            $(".product-table tfoot td").text("");
-        }
-        if($(".cart-table tbody").text()==""){
-            $(".cart-table tfoot td").text("");
-        }
-      } else {
-        console.log('Thing was not deleted.');
-      }
+    $(event.target).parent().parent().remove();
+    let index=$(event.target).parent().parent().index();
+    products.splice(index,1);
+    render();
+    if($(".product-table tbody").text()==""){
+        $(".product-table tfoot td").text("");
+    }
+    if($(".cart-table tbody").text()==""){
+        $(".cart-table tfoot td").text("");
+    }
 })
 
 function clearTableData(){
