@@ -65,7 +65,7 @@ $(".product-table").on("click",".deleteProduct",(e)=>{
             $(".cart-table tfoot td").text("");
         }
       } else {
-        console.log('Thing was not deleted.');
+        
       }
 })
 

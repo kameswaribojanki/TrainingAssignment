@@ -41,15 +41,19 @@ function insertInToTable(products) {
 }
 $(".product-table").on("click", ".deleteProduct", function (e) {
     e.preventDefault();
-    $(event.target).parent().parent().remove();
-    var index = $(event.target).parent().parent().index();
-    products.splice(index, 1);
-    render();
-    if ($(".product-table tbody").text() == "") {
-        $(".product-table tfoot td").text("");
+    if (confirm('Are you sure you want to delete the record')) {
+        $(event.target).parent().parent().remove();
+        var index_1 = $(event.target).parent().parent().index();
+        products.splice(index_1, 1);
+        render();
+        if ($(".product-table tbody").text() == "") {
+            $(".product-table tfoot td").text("");
+        }
+        if ($(".cart-table tbody").text() == "") {
+            $(".cart-table tfoot td").text("");
+        }
     }
-    if ($(".cart-table tbody").text() == "") {
-        $(".cart-table tfoot td").text("");
+    else {
     }
 });
 function clearTableData() {
@@ -63,8 +67,8 @@ $(".product-table tbody").on("input", "td .quantity", function (e) {
     var index = $(event.target).parent().parent().index();
     for (var i = 0; i < products.length; i++) {
         if (index == i) {
-            if (value < 0 || !(Number(value))) {
-                alert("negative and float values are not allowed");
+            if (value <= 0 || !(Number(value))) {
+                alert("please enter positive valid number");
             }
             else {
                 products[i].quantity = value;
@@ -77,8 +81,8 @@ $(".product-table tbody").on("click", "td .fa-plus", function (e) {
     e.preventDefault();
     console.log("plus");
     for (var i = 0; i < products.length; i++) {
-        var index_1 = $(event.target).parent().parent().index();
-        if (index_1 == i) {
+        var index_2 = $(event.target).parent().parent().index();
+        if (index_2 == i) {
             products[i].quantity = parseInt(products[i].quantity) + 1;
         }
     }
@@ -88,12 +92,12 @@ $(".product-table tbody").on("click", "td .fa-minus", function (e) {
     e.preventDefault();
     console.log("minus");
     for (var i = 0; i < products.length; i++) {
-        var index_2 = $(event.target).parent().parent().index();
-        if (index_2 == i) {
+        var index_3 = $(event.target).parent().parent().index();
+        if (index_3 == i) {
             products[i].quantity = parseInt(products[i].quantity) - 1;
             if (products[i].quantity == "0") {
                 $(event.target).parent().parent().remove();
-                products.splice(index_2, 1);
+                products.splice(index_3, 1);
             }
         }
     }

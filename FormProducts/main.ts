@@ -53,15 +53,19 @@ function insertInToTable(products):void{
 
 $(".product-table").on("click",".deleteProduct",(e)=>{
     e.preventDefault();
-    $(event.target).parent().parent().remove();
-    let index:number=$(event.target).parent().parent().index();
-    products.splice(index,1);
-    render();
-    if($(".product-table tbody").text()==""){
-        $(".product-table tfoot td").text("");
-    }
-    if($(".cart-table tbody").text()==""){
-        $(".cart-table tfoot td").text("");
+    if (confirm('Are you sure you want to delete the record')) {
+        $(event.target).parent().parent().remove();
+        let index:number=$(event.target).parent().parent().index();
+        products.splice(index,1);
+        render();
+        if($(".product-table tbody").text()==""){
+            $(".product-table tfoot td").text("");
+        }
+        if($(".cart-table tbody").text()==""){
+            $(".cart-table tfoot td").text("");
+        }
+    } else {
+    
     }
 })
 
@@ -78,8 +82,8 @@ $(".product-table tbody").on("input","td .quantity",function(e){
     let index:number=$(event.target).parent().parent().index();
     for(let i=0;i<products.length;i++){
         if(index==i){
-            if(value<0 || !(Number(value))){
-                alert("negative and float values are not allowed");
+            if(value<=0 || !(Number(value))){
+                alert("please enter positive valid number");
             }
             else{
             products[i].quantity=value;
