@@ -3,7 +3,7 @@ var indexid:number;
 $(".btn").on("click",function (event):void{
     event.preventDefault();
     var btnValue:string=$(this).text();
-    var inputvalue:string= $(".input-item").val();
+    var inputvalue:string= $(".input-item").val().toString();
     if(inputvalue==""){
         alert('Please enter value');
         return;
@@ -26,13 +26,17 @@ $(".item-list").on("click",".li-item",function (event):void{
     $(".btn").text("update");
 });
 $(".item-list").on("click", ".remove", function () {
+    if (confirm('Are you sure you want to delete the record')) {
         var currentIndex:number = items.indexOf($(this).parent("li").text());
         $(this).parent("li").remove();
         items.splice(currentIndex, 1);
+    } else {
+        
+    }
       });
 
 function updateItemsInList():void{
-    var value:string= $(".input-item").val();
+    var value:string= $(".input-item").val().toString();
     items[indexid] = value;
     readArrData(items);
     $(".btn").text("Store");
